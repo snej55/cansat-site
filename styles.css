@@ -33,6 +33,7 @@ body > h1 {
 }
 
 div#header {
+    color: #fff;
     position: absolute; /* Apply the sticky positioning */
     top: 0; /* Stick the element to the top of the viewport */
     z-index: 100;
@@ -48,5 +49,5 @@ div#content {
     max-width: 95vw;
     min-height: 100vh;
     align-self: center;
-    padding: 20px;
+    padding: 50px 20px 0 50px;
 }
