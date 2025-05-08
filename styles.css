@@ -1,5 +1,15 @@
 :root {
-    
+    --main-red: #b13e53;
+    --main-orange: #ef7d57;
+    --main-yellow: #ffcd75;
+    --main-lime: #a7f070;
+    --main-green: #38b764;
+    --main-blue: #257179;
+    --main-white: #f4f4f6;
+    --main-light-grey: #a4b0bc;
+    --main-grey: #5a6c80;
+    --main-dark-grey: #333c40;
+    --main-black: #1a1a20;
 }
 
 * {
@@ -13,7 +23,7 @@ body {
     width: 100vw;
     display: flex;
     flex-direction: column;
-    background-color: #fff;
+    background-color: var(--main-white);
 }
 
 body > h1 {
