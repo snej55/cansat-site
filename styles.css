@@ -15,7 +15,7 @@
 * {
     margin: 0;
     padding: 0;
-    color: #fff;
+    color: var(white);
 }
 
 body {
@@ -44,11 +44,9 @@ div#header {
 
 div#content {
     margin-top: 30px;
-    width: 1400px;
-    max-width: 90vw;
+    width: 1600px;
+    max-width: 95vw;
     min-height: 100vh;
     align-self: center;
-    border-radius: 12px;
     padding: 20px;
-    background-color: #222;
 }
