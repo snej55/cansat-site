@@ -52,6 +52,13 @@ div#header > ul {
 div#header > ul > li {
     list-style: none;
     padding: 0 15px;
+    color: var(--main-white);
+    transition: 0.3s ease-in-out;
+}
+
+
+div#header > ul > li:hover {
+    color: var(--main-light-grey);
 }
 
 div#content {
