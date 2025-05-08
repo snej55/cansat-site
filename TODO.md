@@ -5,4 +5,4 @@
 - [ ] Add images (with proper styling)
 - [ ] Make menu icon do something or get rid of it
 - [X] Make clicking logo return to home
-- [ ] Fix documentation button -- Jan - working on it
+- [X] Fix documentation button
