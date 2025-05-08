@@ -76,7 +76,7 @@ div#header > ul > li:last-child {
 
 div#header > ul > li:hover {
     color: var(--main-light-grey);
-    border-bottom: 1px var(--main-white) solid;
+    border-bottom: 1px #fff5 solid;
 }
 
 div#header > a {
