@@ -90,7 +90,7 @@ div#content {
     /* background-color: var(--main-white); */
 }
 
-div#content > ul {
+ul {
  padding-left: 20px;
 }
 
