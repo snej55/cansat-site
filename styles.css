@@ -33,9 +33,15 @@ body > h1 {
     font-size: 45px;
 }
 
+div#header > img#CastAway {
+    width: 26px;
+    height: 26px;
+    padding-left: 15px;
+}
+
 h2 {
     font-size: 20px;
-    padding: 0 15px;
+    padding: 0 15px 0 8px;
 }
 
 div#header {
@@ -84,4 +90,15 @@ div#content {
 
 div#content > ul {
  padding-left: 20px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: var(--main-dark-grey);
+    color: #fff;
+    padding: 15px 0;
+    margin-top: 30px;
+    width: 100vw;
+    font-weight: 600;
 }
