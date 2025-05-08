@@ -27,21 +27,16 @@ body {
     background-color: var(--main-white);
 }
 
-body > h1 {
-    text-align: center;
-    padding: 20px;
-    font-size: 45px;
-}
-
 div#header > img#CastAway {
-    width: 26px;
-    height: 26px;
+    width: 30px;
+    height: 30px;
     padding-left: 15px;
 }
 
 h2 {
     font-size: 20px;
     padding: 0 15px 0 8px;
+    cursor: default;
 }
 
 div#header {
@@ -49,11 +44,12 @@ div#header {
     position: fixed; /* Apply the sticky positioning */    
     display: flex;
     align-items: center;
+    /* justify-content: left; */
     top: 0; /* Stick the element to the top of the viewport */
     width: 100vw;
     font-weight: 600;
     background-color: var(--main-dark-grey);
-    padding: 15px 0;
+    padding: 8px 0;
 }
 
 div#header > ul {
@@ -78,6 +74,12 @@ div#header > ul > li:hover {
     color: var(--main-light-grey);
 }
 
+div#header > a {
+    margin-right: 20px;
+    margin-left: auto;
+    font-size: 18px;
+}
+
 div#content {
     margin-top: 30px;
     width: 1400px;
@@ -94,6 +96,7 @@ div#content > ul {
 
 footer {
     display: flex;
+    /* flex-direction: column; */
     justify-content: center;
     background-color: var(--main-dark-grey);
     color: #fff;
@@ -101,6 +104,13 @@ footer {
     margin-top: 30px;
     width: 100vw;
     font-weight: 600;
+}
+
+footer > div > div#icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 20px;
 }
 
 a {
