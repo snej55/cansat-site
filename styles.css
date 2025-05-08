@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+body > h1 {
+    text-align: center;
+    padding: 20px;
+    font-size: 45px;
+}
+
+div#footer {
+    position: absolute; /* Apply the sticky positioning */
+    top: 0; /* Stick the element to the top of the viewport */
+    z-index: 100;
+    width: 100vw;
+    text-align: center;
+    background-color: #535357;
+    padding: 10px 0;
+}
+
+div#content {
+    margin-top: 30px;
+    width: 1400px;
+    max-width: 90vw;
+    min-height: 100vh;
+    align-self: center;
+    border-radius: 12px;
+    padding: 20px;
+    background-color: #222;
+}
