@@ -40,7 +40,7 @@ h2 {
 
 div#header {
     color: #fff;
-    position: absolute; /* Apply the sticky positioning */    
+    position: fixed; /* Apply the sticky positioning */    
     display: flex;
     align-items: center;
     top: 0; /* Stick the element to the top of the viewport */
