@@ -102,3 +102,13 @@ footer {
     width: 100vw;
     font-weight: 600;
 }
+
+a {
+    color: var(--main-white);
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+a:hover {
+    color: var(--main-light-grey);
+}
