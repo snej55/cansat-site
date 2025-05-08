@@ -65,7 +65,7 @@ div#header > ul > li {
     cursor: pointer;
     height: max-content;
     position: inherit;
-    border-bottom: 1px var(--main-dark-grey) solid;
+    border-bottom: 1px #fff0 solid;
     /* border-right: 1px solid var(--main-white); */
 }
 
@@ -76,7 +76,7 @@ div#header > ul > li:last-child {
 
 div#header > ul > li:hover {
     color: var(--main-light-grey);
-    border-bottom: 1px #fff5 solid;
+    border-bottom: 1px #fff8 solid;
 }
 
 div#header > a {
