@@ -1,0 +1,87 @@
+:root {
+    --main-red: #b13e53;
+    --main-orange: #ef7d57;
+    --main-yellow: #ffcd75;
+    --main-lime: #a7f070;
+    --main-green: #38b764;
+    --main-blue: #257179;
+    --main-white: #f4f4f6;
+    --main-light-grey: #a9b0bb;
+    --main-grey: #5a6c70;
+    --main-dark-grey: #33373a;
+    --main-black: #1a1a1e;
+}
+
+* {
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(white);
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-white);
+}
+
+body > h1 {
+    text-align: center;
+    padding: 20px;
+    font-size: 45px;
+}
+
+h2 {
+    font-size: 20px;
+    padding: 0 15px;
+}
+
+div#header {
+    color: #fff;
+    position: fixed; /* Apply the sticky positioning */    
+    display: flex;
+    align-items: center;
+    top: 0; /* Stick the element to the top of the viewport */
+    width: 100vw;
+    font-weight: 600;
+    background-color: var(--main-dark-grey);
+    padding: 15px 0;
+}
+
+div#header > ul {
+    display: flex;
+}
+
+div#header > ul > li {
+    list-style: none;
+    padding: 0 15px;
+    color: var(--main-white);
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+    /* border-right: 1px solid var(--main-white); */
+}
+
+/* 
+div#header > ul > li:last-child {
+    border-right: none;
+} */
+
+div#header > ul > li:hover {
+    color: var(--main-light-grey);
+}
+
+div#content {
+    margin-top: 30px;
+    width: 1400px;
+    max-width: 80vw;
+    min-height: 100vh;
+    align-self: center;
+    padding: 50px 20px 0 50px;
+    /* background-color: var(--main-white); */
+}
+
+div#content > ul {
+ padding-left: 20px;
+}
