@@ -6,10 +6,10 @@
     --main-green: #38b764;
     --main-blue: #257179;
     --main-white: #f4f4f6;
-    --main-light-grey: #a4b0bc;
-    --main-grey: #5a6c80;
-    --main-dark-grey: #333c40;
-    --main-black: #1a1a20;
+    --main-light-grey: #a9b0bb;
+    --main-grey: #5a6c70;
+    --main-dark-grey: #33373a;
+    --main-black: #1a1a1e;
 }
 
 * {
@@ -38,7 +38,7 @@ div#header {
     z-index: 100;
     width: 100vw;
     text-align: center;
-    background-color: #333;
+    background-color: var(--main-dark-grey);
     padding: 15px 0;
 }
 
