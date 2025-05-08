@@ -1,2 +1,0 @@
-# cansat-site
-CanSat webiste
