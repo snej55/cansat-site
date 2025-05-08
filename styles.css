@@ -65,11 +65,6 @@ div#header > ul > li {
 
 
 div#header > ul > li:last-child {
-    list-style: none;
-    padding: 0 15px;
-    color: var(--main-white);
-    transition: 0.2s ease-in-out;
-    cursor: pointer;
     border-right: none;
 }
 
