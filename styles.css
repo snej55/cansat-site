@@ -51,4 +51,5 @@ div#content {
     min-height: 100vh;
     align-self: center;
     padding: 50px 20px 0 50px;
+    /* background-color: var(--main-white); */
 }
