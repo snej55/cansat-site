@@ -60,8 +60,18 @@ div#header > ul > li {
     color: var(--main-white);
     transition: 0.2s ease-in-out;
     cursor: pointer;
+    border-right: 1px solid var(--main-white);
 }
 
+
+div#header > ul > li:last-child {
+    list-style: none;
+    padding: 0 15px;
+    color: var(--main-white);
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+    border-right: none;
+}
 
 div#header > ul > li:hover {
     color: var(--main-light-grey);
