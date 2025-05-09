@@ -64,18 +64,18 @@ div#header > ul > li {
     transition: 0.2s ease-in-out;
     cursor: pointer;
     height: max-content;
-    position: inherit;
+    /* position: inherit; */
     border-bottom: 1px #fff0 solid;
     /* border-right: 1px solid var(--main-white); */
-    opacity: 0.0;
+    /* opacity: 0.0; */
     /* translate: -100px, 0px; */
-    transform: translate(-100px, 0px);
+    /* transform: translate(-100px, 0px); */
 }
 
-div#header:hover > ul > li {
+/* div#header:hover > ul > li {
     opacity: 1.0;
     transform: translate(-10px, 0px);
-}
+} */
 
 /* 
 div#header > ul > li:last-child {
@@ -89,7 +89,7 @@ div#header > ul > li:hover {
 
 div#header > a {
     margin-right: 20px;
-    /* margin-left: auto; */
+    margin-left: auto;
     font-size: 18px;
 }
 
