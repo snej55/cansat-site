@@ -7,3 +7,5 @@
 - [X] Make clicking logo return to home
 - [X] Fix documentation button
 - [ ] fix fontello issues
+- [ ] Fix logo
+- [ ] Light mode / dark mode
