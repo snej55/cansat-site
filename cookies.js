@@ -1,5 +1,21 @@
+let menuOpen = false
+
 if (document.cookie == "") {
 document.cookie = "background: 0;"
+}
+
+document.getElementById("myDropdown").style.display = "none";
+
+
+function menu() {
+    if (menuOpen) {
+        menuOpen = false;
+        document.getElementById("myDropdown").style.display = "none";
+    }
+    else {
+        menuOpen = true;
+        document.getElementById("myDropdown").style.display = "flex"
+    }
 }
 
 function update() {
@@ -20,11 +36,7 @@ function toggleBackground() {
     else {
         document.cookie = "background: 0;"
     }
-    update()
-console.log(document.cookie)
-
+    update();
 }
 
 update()
-
-console.log(document.cookie)
