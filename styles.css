@@ -67,6 +67,14 @@ div#header > ul > li {
     position: inherit;
     border-bottom: 1px #fff0 solid;
     /* border-right: 1px solid var(--main-white); */
+    opacity: 0.0;
+    /* translate: -100px, 0px; */
+    transform: translate(-100px, 0px);
+}
+
+div#header:hover > ul > li {
+    opacity: 1.0;
+    transform: translate(-10px, 0px);
 }
 
 /* 
@@ -81,8 +89,16 @@ div#header > ul > li:hover {
 
 div#header > a {
     margin-right: 20px;
-    margin-left: auto;
+    /* margin-left: auto; */
     font-size: 18px;
+}
+
+.icon-menu {
+    transition: 0.3s;
+}
+
+div#heaver:hover > .icon-menu {
+    opacity: 0.0;
 }
 
 div#content {
