@@ -93,6 +93,7 @@ div#header > a {
 }
 
 .icon-menu {
+    cursor: pointer;
     transition: 0.3s;
 }
 
@@ -133,20 +134,26 @@ footer > div > div#icons {
     font-size: 20px;
 }
 
-a {
+footer > div > div > a {
     color: var(--main-white);
     transition: 0.2s ease-in-out;
     cursor: pointer;
 }
 
-a:hover {
+footer > div > div > a:hover {
     color: var(--main-light-grey);
 }
 
 #myDropdown {
+    padding: 10px 20px;
     position: fixed;
+    cursor: pointer;
     right: 20px;
     top: 50px;
     z-index: 0;
     flex-direction: column;
+}
+
+#myDropdown > a {
+    padding: 5px 0;
 }
