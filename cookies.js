@@ -18,13 +18,22 @@ function menu() {
     }
 }
 
+function close() {
+    menuOpen = false;
+    document.getElementById("myDropdown").style.display = "none";
+}
+
 function update() {
     if (document.cookie.trim().startsWith("background: 1")) {
-        document.body.style.backgroundColor = "#333"
+        document.body.style.backgroundColor = "var(--main-dark-grey)"
+        document.getElementById("header").style.backgroundColor = "var(--main-orange)"
+        document.getElementsByTagName("footer")[0].style.backgroundColor = "var(--main-orange)"
         document.getElementById("content").style.color = "#fff"
     }
     else {
-        document.body.style.backgroundColor = "#fff"
+        document.body.style.backgroundColor = "var(--main-white)"
+        document.getElementById("header").style.backgroundColor = "var(--main-dark-grey)"
+        document.getElementsByTagName("footer")[0].style.backgroundColor = "var(--main-dark-grey)"
         document.getElementById("content").style.color = "#000"
     }
 }
@@ -37,6 +46,7 @@ function toggleBackground() {
         document.cookie = "background: 0;"
     }
     update();
+    close()
 }
 
 update()
