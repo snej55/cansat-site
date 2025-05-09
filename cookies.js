@@ -4,11 +4,12 @@ document.cookie = "background: 0;"
 
 function update() {
     if (document.cookie.trim().startsWith("background: 1")) {
-        document.body.style.backgroundColor = "#000"
+        document.body.style.backgroundColor = "#333"
+        document.getElementById("content").style.color = "#fff"
     }
     else {
         document.body.style.backgroundColor = "#fff"
-
+        document.getElementById("content").style.color = "#000"
     }
 }
 
