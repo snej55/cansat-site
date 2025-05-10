@@ -27,16 +27,16 @@ function update() {
     if (document.cookie.trim().startsWith("background: 1")) {
         document.body.style.backgroundColor = "var(--main-dark-grey)"
         document.getElementById("myDropdown").style.color = "#fff"
-        document.getElementById("myDropdown").style.border = "var(--main-orange) solid 1px"
+        document.getElementById("myDropdown").style.border = "var(--main-orange) solid 2px"
         document.getElementById("myDropdown").style.backgroundColor = "var(--main-dark-grey)"
-        document.getElementById("header").style.backgroundColor = "var(--main-orange)"
-        document.getElementsByTagName("footer")[0].style.backgroundColor = "var(--main-orange)"
+        document.getElementById("header").style.backgroundColor = "var(--main-grey)"
+        document.getElementsByTagName("footer")[0].style.backgroundColor = "var(--main-blue)"
         document.getElementById("content").style.color = "#fff"
     }
     else {
         document.body.style.backgroundColor = "var(--main-white)"
         document.getElementById("myDropdown").style.color = "#000"
-        document.getElementById("myDropdown").style.border = "var(--main-dark-grey) solid 1px"
+        document.getElementById("myDropdown").style.border = "var(--main-dark-grey) solid 2px"
         document.getElementById("myDropdown").style.backgroundColor = "var(--main-white)"
         document.getElementById("header").style.backgroundColor = "var(--main-dark-grey)"
         document.getElementsByTagName("footer")[0].style.backgroundColor = "var(--main-dark-grey)"

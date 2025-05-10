@@ -145,15 +145,29 @@ footer > div > div > a:hover {
 }
 
 #myDropdown {
-    padding: 10px 20px;
+    padding: 10px 10px;
     position: fixed;
     cursor: pointer;
     right: 20px;
     top: 50px;
     z-index: 0;
     flex-direction: column;
+    transition: 0.3s;
+    background-color: var(--main-light-grey);
 }
 
 #myDropdown > a {
-    padding: 5px 0;
+    padding: 5px 5px;
+    margin: 0px;
+    transition: 0.3s;
+    border-left: 3px #0000 solid;
+    /* color: #fff; */
+    background-color: #0000;
+}
+
+#myDropdown > a:hover {
+    color: #000000;
+    border-left: 3px #6b6b6b solid;
+    background-color: #cecece;
+    transform: translate(2px, 0px);
 }
