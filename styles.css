@@ -48,7 +48,8 @@ div#header {
     top: 0; /* Stick the element to the top of the viewport */
     width: 100vw;
     font-weight: 600;
-    background-color: var(--main-dark-grey);
+    background-color: rgba(var(--main-dark-grey), .8);
+    backdrop-filter: blur(10px) brightness(0.4);
     padding: 8px 0;
 }
 
@@ -82,7 +83,7 @@ div#header > ul > li:last-child {
 } */
 
 div#header > ul > li:hover {
-    color: var(--main-light-grey);
+    color: var(--main-orange);
     border-bottom: 1px #fff8 solid;
 }
 
