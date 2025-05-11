@@ -11,3 +11,4 @@
 - [X] Light mode / dark mode
 - [ ] Make changing page scroll to the top
 - [ ] Make logo a badge
+- [ ] Make buttons unselectable
