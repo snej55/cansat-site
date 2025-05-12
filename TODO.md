@@ -12,3 +12,4 @@
 - [ ] Make changing page scroll to the top
 - [X] Make logo a badge
 - [X] Make buttons unselectable
+- [ ] Add credits link to footer
