@@ -62,31 +62,26 @@ div#header > ul {
 div#header > ul > li {
     list-style: none;
     padding: 0 15px;
-    color: var(--main-white);
+    color: #fff;
     transition: 0.2s ease-in-out;
     cursor: pointer;
     height: max-content;
-    /* position: inherit; */
     border-bottom: 1px #fff0 solid;
-    /* border-right: 1px solid var(--main-white); */
-    /* opacity: 0.0; */
-    /* translate: -100px, 0px; */
-    /* transform: translate(-100px, 0px); */
 }
 
-/* div#header:hover > ul > li {
-    opacity: 1.0;
-    transform: translate(-10px, 0px);
-} */
-
-/* 
-div#header > ul > li:last-child {
-    border-right: none;
-} */
+div#header > ul > li > a {
+    transition: 0.2s ease-in-out;
+    color: #fff; 
+    text-decoration: none;
+}
 
 div#header > ul > li:hover {
     color: var(--main-orange);
     border-bottom: 1px #fff8 solid;
+}
+
+div#header > ul > li:hover > a {
+    color: var(--main-orange);
 }
 
 div#header > a {
