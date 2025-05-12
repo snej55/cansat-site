@@ -25,7 +25,6 @@ body {
     flex-direction: column;
     /* background: linear-gradient(128deg,#01d486 0%,#3daee8 100%); */
     background-color: var(--main-white);
-    
 }
 
 div#header > img#CastAway {
@@ -43,15 +42,15 @@ h2 {
 
 div#header {
     color: #fff;
-    position: fixed; /* Apply the sticky positioning */    
+    position: fixed;
     display: flex;
     align-items: center;
     /* justify-content: left; */
-    top: 0; /* Stick the element to the top of the viewport */
+    top: 0;
     width: 100vw;
     font-weight: 600;
-    background-color: rgba(var(--main-dark-grey), .8);
-    backdrop-filter: blur(10px) brightness(0.4);
+    background-color: var(--main-dark-grey)ff;
+    /* backdrop-filter: blur(10px) brightness(0.4); */
     padding: 8px 0;
 }
 
@@ -160,6 +159,7 @@ footer > div > div > a:hover {
 }
 
 #myDropdown > a {
+    min-width: 150px;
     padding: 5px 5px;
     margin: 0px;
     transition: 0.3s;
@@ -173,4 +173,29 @@ footer > div > div > a:hover {
     border-left: 3px #6b6b6b solid;
     background-color: #cecece;
     transform: translate(2px, 0px);
+}
+
+#myDropdown > div {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+}
+
+#myDropdown > div > a:first-child {
+    margin: 0 0 0 5px;
+    background-color: #000;
+    width: 25px;
+    height: 25px;
+    border: #888 solid 3px;
+    border-radius: 15.5px;
+}
+
+#myDropdown > div > a:last-child {
+    margin: 0 5px;
+    background-color: #fff;
+    width: 25px;
+    height: 25px;
+    border: #888 solid 3px;
+    border-radius: 15.5px;
 }

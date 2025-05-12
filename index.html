@@ -21,8 +21,11 @@
         </ul>
         <a onclick="menu()"><i class="demo-icon icon-menu">More</i></a>
         <div id="myDropdown" class="dropdown-content">
-            <a class="menu-item" onclick="toggleBackground()">theme</a>
-            <a class="menu-item" onclick="toggleBackground()">Link 2</a>
+            <div>
+                Mode
+                <a class="menu-item" onclick="toggleBackground(document.cookie = 'background: 0;')"></a>
+                <a class="menu-item" onclick="toggleBackground(document.cookie = 'background: 1;')"></a>
+            </div>
             <a class="menu-item" onclick="toggleBackground()">Link 3</a>
         </div>
     </div>
