@@ -7,8 +7,8 @@
 - [X] Make clicking logo return to home
 - [X] Fix documentation button
 - [ ] fix fontello issues
-- [ ] Fix logo
+- [X] Fix logo
 - [X] Light mode / dark mode
 - [ ] Make changing page scroll to the top
-- [ ] Make logo a badge
+- [X] Make logo a badge
 - [ ] Make buttons unselectable
