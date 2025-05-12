@@ -29,16 +29,12 @@ body {
 }
 
 div#header > img#CastAway {
+    -webkit-user-drag: none;
     width: 30px;
     height: 30px;
     margin-left: 15px;
     cursor: pointer;
     transition: 0.3s;
-}
-
-div#header > img#CastAway:hover {
-    animation: spin 1s infinite linear;
-    animation-delay: 2s;
 }
 
 @keyframes spin {
@@ -48,6 +44,11 @@ div#header > img#CastAway:hover {
     100% {
         transform: rotate(360deg);
     }
+}
+
+div#header > img#CastAway:hover {
+    animation: spin 1s infinite linear;
+    animation-delay: 2s;
 }
 
 h2 {
@@ -146,6 +147,7 @@ footer {
 }
 
 footer > div > div#icons {
+    user-select: none;
     display: flex;
     justify-content: center;
     margin-top: 10px;
