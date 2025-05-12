@@ -147,9 +147,8 @@ footer > div > div > a:hover {
 }
 
 #myDropdown {
-    padding: 10px 10px;
+    padding: 10px;
     position: fixed;
-    cursor: pointer;
     right: 20px;
     top: 50px;
     z-index: 0;
@@ -158,17 +157,18 @@ footer > div > div > a:hover {
     background-color: var(--main-light-grey);
 }
 
-#myDropdown > a {
+#myDropdown > i {
     min-width: 150px;
-    padding: 5px 5px;
+    padding: 5px;
     margin: 0px;
-    transition: 0.3s;
+    transition: 0.25s ease-out;
     border-left: 3px #0000 solid;
+    cursor: pointer;
     /* color: #fff; */
     background-color: #0000;
 }
 
-#myDropdown > a:hover {
+#myDropdown > i:hover {
     color: #000000;
     border-left: 3px #6b6b6b solid;
     background-color: #cecece;
@@ -176,26 +176,27 @@ footer > div > div > a:hover {
 }
 
 #myDropdown > div {
+    padding-left: 5px;
     display: flex;
     justify-items: center;
     align-items: center;
     width: 100%;
 }
 
-#myDropdown > div > a:first-child {
+
+#myDropdown > div > a {
+    cursor: pointer;
     margin: 0 0 0 5px;
-    background-color: #000;
-    width: 25px;
-    height: 25px;
+    width: 18px;
+    height: 18px;
     border: #888 solid 3px;
     border-radius: 15.5px;
 }
 
-#myDropdown > div > a:last-child {
-    margin: 0 5px;
+#myDropdown > div > a:first-child {
+    background-color: #000;
+}
+
+#myDropdown > div > a:last-child { 
     background-color: #fff;
-    width: 25px;
-    height: 25px;
-    border: #888 solid 3px;
-    border-radius: 15.5px;
 }

@@ -1,7 +1,7 @@
 let menuOpen = false
 
 if (document.cookie == "") {
-document.cookie = "background: 0;"
+document.cookie = 'background: 0;'
 }
 
 document.getElementById("myDropdown").style.display = "none";
