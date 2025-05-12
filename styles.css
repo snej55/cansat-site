@@ -31,8 +31,23 @@ body {
 div#header > img#CastAway {
     width: 30px;
     height: 30px;
-    padding-left: 15px;
+    margin-left: 15px;
     cursor: pointer;
+    transition: 0.3s;
+}
+
+div#header > img#CastAway:hover {
+    animation: spin 1s infinite linear;
+    animation-delay: 2s;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 h2 {
@@ -53,6 +68,11 @@ div#header {
     background-color: var(--main-dark-grey)ff;
     /* backdrop-filter: blur(10px) brightness(0.4); */
     padding: 8px 0;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
 
 div#header > ul {
