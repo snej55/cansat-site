@@ -32,6 +32,8 @@ function update() {
         document.getElementById("header").style.backgroundColor = "var(--main-blue)"
         document.getElementsByTagName("footer")[0].style.backgroundColor = "var(--main-blue)"
         document.getElementById("content").style.color = "#fff"
+        document.getElementsByClassName("menu-item")[1].style.border = "none"
+        document.getElementsByClassName("menu-item")[0].style.border = "#888 solid 3px"
     }
     else {
         document.body.style.backgroundColor = "var(--main-white)"
@@ -41,6 +43,8 @@ function update() {
         document.getElementById("header").style.backgroundColor = "var(--main-dark-grey)"
         document.getElementsByTagName("footer")[0].style.backgroundColor = "var(--main-dark-grey)"
         document.getElementById("content").style.color = "#000"
+        document.getElementsByClassName("menu-item")[1].style.border = "#888 solid 3px"
+        document.getElementsByClassName("menu-item")[0].style.border = "none"
     }
 }
 
