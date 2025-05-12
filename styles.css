@@ -158,7 +158,9 @@ footer > div > div > a:hover {
     background-color: var(--main-light-grey);
 }
 
-#myDropdown > i {
+#myDropdown > .menu-item {
+    text-decoration: none;
+    color: #fff;
     min-width: 150px;
     padding: 5px;
     margin: 0px;
@@ -169,8 +171,8 @@ footer > div > div > a:hover {
     background-color: #0000;
 }
 
-#myDropdown > i:hover {
-    color: #000000;
+#myDropdown > .menu-item:hover {
+    color: #000;
     border-left: 3px #6b6b6b solid;
     background-color: #cecece;
     transform: translate(2px, 0px);
