@@ -10,6 +10,7 @@
     --main-grey: #696c70;
     --main-dark-grey: #33373a;
     --main-black: #1a1a1e;
+    --link-color: var(--main-white);
 }
 
 * {
@@ -66,7 +67,7 @@ div#header {
     top: 0;
     width: 100vw;
     font-weight: 600;
-    background-color: var(--main-dark-grey)ff;
+    background-color: var(--main-dark-grey);
     /* backdrop-filter: blur(10px) brightness(0.4); */
     padding: 8px 0;
     -moz-user-select: -moz-none;
@@ -97,12 +98,12 @@ div#header > ul > li > a {
 }
 
 div#header > ul > li:hover {
-    color: var(--main-orange);
-    border-bottom: 1px #fff8 solid;
+    color: var(--link-color);
+    border-bottom: 1px #aaa9 solid;
 }
 
 div#header > ul > li:hover > a {
-    color: var(--main-orange);
+    color: var(--link-color);
 }
 
 div#header > a {

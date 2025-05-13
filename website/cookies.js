@@ -35,6 +35,7 @@ function update() {
         document.getElementsByClassName("menu-item")[1].style.border = "none"
         document.getElementsByClassName("menu-item")[0].style.border = "#888 solid 3px"
         document.getElementById("credits").style.color = "#fff"
+        document.documentElement.style.setProperty('--link-color', 'var(--main-light-grey)')
     }
     else {
         document.body.style.backgroundColor = "var(--main-white)"
@@ -47,6 +48,7 @@ function update() {
         document.getElementsByClassName("menu-item")[1].style.border = "#888 solid 3px"
         document.getElementsByClassName("menu-item")[0].style.border = "none"
         document.getElementById("credits").style.color = "#000"
+        document.documentElement.style.setProperty('--link-color', 'var(--main-orange)')
     }
 }
 
