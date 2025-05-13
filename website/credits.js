@@ -7,4 +7,5 @@ function credits() {
     document.getElementById("credits").innerHTML = "Home";
     document.getElementById("credits").setAttribute( "onClick", "javascript: home();" );
     document.getElementById("myDropdown").style.display = "none";
+    scroll(0, 0);
 }
