@@ -173,6 +173,10 @@ function home() {
     did not have a chance to complete what later became known as the U.S. Triple Crown of Thoroughbred Racing, consisting of the Kentucky 
     Derby, Preakness Stakes, and Belmont Stakes. The previous year, Sir Barton had won the three races, which gained in prestige and importance 
     10 years later when Gallant Fox accomplished the same feat under a great deal of <br>
-`}
+`
+    document.getElementById("credits").innerHTML = "Credits";
+    document.getElementById("credits").setAttribute( "onClick", "javascript: credits();" );
+    document.getElementById("myDropdown").style.display = "none";
+}
 
 home()
