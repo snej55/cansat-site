@@ -45,11 +45,11 @@ class CanSat:
     def sleep_mpu(self):
         self.mpu.sleep()
     
-    # Print the gyro data to a 3object tuple (x,y,z)
+    # Print the gyro data to a 3-object (x,y,z)
     def get_gyro_data_mpu(self):
         return self.mpu.read_gyro_data()
     
-    # Print the accel data to a 3object tuple (x,y,z)
+    # Print the accelerometer data to a 3-object tuple (x,y,z)
     def get_accel_data_mpu(self):
         return self.mpu.read_accel_data()
     
