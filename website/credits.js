@@ -9,15 +9,16 @@ function credits() {
  <br>
    <b> logo design and team name:</b> <br>
     nick zyuzin <br>
-    sebastian thorton <br>
+    sebastian thornton <br>
  <br>
    <b> web design:</b> <br>
     jan Lukasiak <br>
     jens kromdijk <br>
     dylan greenwood <br>
+    sebastian thornton
  <br>
    <b> parachute design:</b> <br>
-    sabastian thorton <br>
+    sabastian thornton <br>
  <br>
    <b> prototyping:</b> <br>
     dylan greenwood <br>
