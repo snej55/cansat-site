@@ -19,6 +19,7 @@ function credits() {
  <br>
    <b> parachute design:</b> <br>
     Sebastian thornton <br>
+    Dylan greenwood <br>
  <br>
    <b> prototyping:</b> <br>
     Dylan greenwood <br>
