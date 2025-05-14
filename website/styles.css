@@ -52,7 +52,7 @@ div#header > img#CastAway:hover {
     animation-delay: 2s;
 }
 
-h2 {
+div#header > h2 {
     font-size: 20px;
     padding: 0 15px 0 8px;
     cursor: pointer;
@@ -129,10 +129,6 @@ div#content {
     align-self: center;
     padding: 50px 20px 0 50px;
     /* background-color: var(--main-white); */
-}
-
-div#container > * {
-    padding: 5px 0;
 }
 
 ul {
