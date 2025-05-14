@@ -1,6 +1,13 @@
 function home() {
+
+// some notes for Sebastian (self made)
+// <br><br> breakspace
+// <ul> bullet point list </ul>
+// <li> line </li>
+
     item.innerHTML = `<h1>Our mission</h1>
     We aspire to push future generations to persue technology <br><br>
+    We inspire new scientists and engineers. <br><br>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum quidem consequuntur blanditiis 
     dignissimos sint alias, nisi, autem nam totam quis quisquam error fuga at nostrum! Modi necessitatibus dolores nemo tempora.
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum vero distinctio, quam recusandae, <br>
