@@ -1,6 +1,9 @@
 from machine import Pin, I2C
 from bmp280 import *
+import MPU6050
 import time
+
+mpu = MPU6050.MPU6050(i2c)
 
 class CanSat:
     def __init__(self):
@@ -29,7 +32,22 @@ class CanSat:
         pressure = self.bmp.pressure
         # convert from Pa to bar
         return pressure / 100000
-
+    #---MPU6050---#
+    #Wake the MPU6050
+    def wake_mpu(self):
+        mpu.wake()
+    
+    #Print the gyro data to a 3object tuple (x,y,z)
+    def get_gyro_data_mpu(self):
+        return self.mpu.read_gyro_data()
+    
+    #Print the accel data to a 3object tuple (x,y,z)
+    def get_accel_data_mpu(self):
+        return self.mpu.read_accel_data()
+    
+    #Print the temperature in Celsius as a float
+    def get_temp_data_mpu(self):
+        return self.mpu.read_temperature()
 if __name__ == "__main__":
     cansat = CanSat()
     while True:
