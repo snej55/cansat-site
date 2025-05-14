@@ -8,25 +8,25 @@ function credits() {
     Nathan yin <br>
  <br>
    <b> logo design and team name:</b> <br>
-    nick zyuzin <br>
-    sebastian thornton <br>
+    Nick zyuzin <br>
+    Sebastian thornton <br>
  <br>
    <b> web design:</b> <br>
-    jan Lukasiak <br>
-    jens kromdijk <br>
-    dylan greenwood <br>
-    sebastian thornton
+    Jan Lukasiak <br>
+    Jens kromdijk <br>
+    Dylan greenwood <br>
+    Sebastian thornton
  <br>
    <b> parachute design:</b> <br>
-    sabastian thornton <br>
+    Sebastian thornton <br>
  <br>
    <b> prototyping:</b> <br>
-    dylan greenwood <br>
-    nathan yin <br>
+    Dylan greenwood <br>
+    Nathan yin <br>
  <br>
    <b> code for satelite:</b> <br>
-    nathan yin <br>
-    jens kromdijk <br>
+    Nathan yin <br>
+    Jens kromdijk <br>
 
 
 `
