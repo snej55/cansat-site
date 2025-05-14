@@ -64,3 +64,9 @@ function toggleBackground() {
 }
 
 update()
+
+addEventListener("resize", (event) => { 
+    if (document.body.style.width  <= 650) {
+        console.log(document.body.style.width)
+    }
+})
