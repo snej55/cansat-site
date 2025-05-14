@@ -1,6 +1,7 @@
 function mission() {
     item.innerHTML = `<h1>Our Mission</h1>
-    We aspire to develop <br> 
+    <br><br>
+    <h2>CastAway is generously supported by the Cambridge Academy for Science and Technology</h2><br> 
     <ul>
         <li>hi</li>
     <ul>
