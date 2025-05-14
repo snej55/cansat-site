@@ -29,6 +29,10 @@ body {
     background-color: var(--main-white);
 }
 
+b {
+    font-weight: 700;
+}
+
 div#header > img#CastAway {
     -webkit-user-drag: none;
     width: 30px;

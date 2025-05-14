@@ -23,7 +23,14 @@ function mission() {
     We need to have a near-constant steam of data sent to us over radio, and be able to recover 
     the satelite in a state where we can recover more data, and use it again.<br>
 
-    Another one of our objectives is to raise public awareness about our project
+    Another one of our objectives is to raise public awareness about our project, which we 
+    are trying to achieve by:
+    <ul>
+        <li>Making this website.</li>
+        <li>Giving presentations to the local education community.</li>
+        <li>Making flyers.</li>
+        <li>Gaining local media coverage.</li>
+    </ul>
 `
     document.getElementById("credits").innerHTML = "Credits";
     document.getElementById("credits").setAttribute( "onClick", "javascript: credits();" );
