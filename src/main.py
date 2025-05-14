@@ -17,15 +17,15 @@ class CanSat:
         self.bmp = BMP280(bus)
     
     # get temperature from bmp280 in celsius
-    def get_temperature(self):
+    def get_temperature_bmp(self):
         return self.bmp.temperature
     
     # get pressure in Pa
-    def get_pressure(self):
+    def get_pressure_bmp(self):
         return self.bmp.pressure
     
     # get pressure from bmp in bar
-    def get_pressure_bar(self):
+    def get_pressure_bar_bmp(self):
         pressure = self.bmp.pressure
         # convert from Pa to bar
         return pressure / 100000
@@ -33,7 +33,7 @@ class CanSat:
 if __name__ == "__main__":
     cansat = CanSat()
     while True:
-        print(f"Temperature: {cansat.get_temperature()} C")
-        print(f"Pressure: {cansat.get_pressure()} Pa | {cansat.get_pressure_bar()} bar")
+        print(f"Temperature: {cansat.get_temperature_bmp()} C")
+        print(f"Pressure: {cansat.get_pressure_bmp()} Pa | {cansat.get_pressure_bar_bmp()} bar")
         time.sleep(0.5)
 
