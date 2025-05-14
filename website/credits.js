@@ -2,28 +2,32 @@ function credits() {
 
     item.innerHTML = `<h1>Credits</h1>
     <h2>cansat</h2>
-    landing gear design: <br>
+    <br>
+    <b>landing gear design:</b> <br>
     Dylan greenwood <br>
     Nathan yin <br>
  <br>
-    logo design: <br>
-    nick zyuzin <br>
+   <b> logo design and team name:</b> <br>
+    Nick zyuzin <br>
+    Sebastian thornton <br>
  <br>
-    web design: <br>
-    jan Lukasiak <br>
-    jens kromdijk <br>
-    dylan greenwood <br>
+   <b> web design:</b> <br>
+    Jan Lukasiak <br>
+    Jens kromdijk <br>
+    Dylan greenwood <br>
+    Sebastian thornton
  <br>
-    parachute design: <br>
-    sabastian thorton <br>
+   <b> parachute design:</b> <br>
+    Sebastian thornton <br>
+    Dylan greenwood <br>
  <br>
-    prototyping: <br>
-    dylan greenwood <br>
-    nathan yin <br>
+   <b> prototyping:</b> <br>
+    Dylan greenwood <br>
+    Nathan yin <br>
  <br>
-    code for satelite: <br>
-    nathan yin <br>
-    jens kromdijk <br>
+   <b> code for satelite:</b> <br>
+    Nathan yin <br>
+    Jens kromdijk <br>
 
 
 `
