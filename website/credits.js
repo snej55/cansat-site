@@ -17,6 +17,7 @@ function credits() {
     Dylan greenwood <br>
     Sebastian thornton
  <br>
+ 
    <b> parachute design:</b> <br>
     Sebastian thornton <br>
     Dylan greenwood <br>
