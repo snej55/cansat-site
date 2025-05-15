@@ -240,6 +240,10 @@ footer > div > div > a:hover {
     background-color: #fff;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
 h1 {
     font-size: 160%;
 }
@@ -249,17 +253,17 @@ h2 {
 }
 
 h3 {
-    font-size: 110%;
+    font-size: 100%;
 }
 
 h4 {
-    font-size: 95%;
-}
-
-h5 {
     font-size: 80%;
 }
 
+h5 {
+    font-size: 60%;
+}
+
 h6 {
-    font-size: 65%;
+    font-size: 45%;
 }
