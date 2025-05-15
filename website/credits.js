@@ -16,14 +16,15 @@ function credits() {
     Jens kromdijk <br>
     Dylan greenwood <br>
     Sebastian thornton
+    <p></p>
  <br>
    <b> parachute design:</b> <br>
     Sebastian thornton <br>
     Dylan greenwood <br>
  <br>
-   <b> prototyping:</b> <br>
-    Dylan greenwood <br>
-    Nathan yin <br>
+   <b> prototyping:</b> 
+    <br>Dylan greenwood /<br>
+    <br>Nathan yin </br>
  <br>
    <b> code for satelite:</b> <br>
     Nathan yin <br>
