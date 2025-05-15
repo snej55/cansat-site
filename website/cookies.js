@@ -1,4 +1,5 @@
 let menuOpen = false
+let mobileView = false
 
 if (document.cookie == "") {
 document.cookie = 'background: 0;'
@@ -50,6 +51,15 @@ function update() {
         document.getElementById("credits").style.color = "#000"
         document.documentElement.style.setProperty('--link-color', 'var(--main-orange)')
     }
+    if (mobileView) {
+        document.getElementById("options").innerHTML = ``
+    }
+    else {
+        document.getElementById("options").innerHTML = `            
+            <li><a onclick="home()">Home</a></li>
+            <li><a onclick="mission()">Our mission</a></li>
+            <li><a onclick="docs()">Documentation</a></li>`
+    }
 }
 
 function toggleBackground() {
@@ -65,8 +75,17 @@ function toggleBackground() {
 
 update()
 
+
+
 addEventListener("resize", (event) => { 
-    if (document.body.style.width  <= 650) {
-        console.log(document.body.style.width)
+    console.log(window.innerWidth)
+
+    if (window.innerWidth  <= 700) {
+        mobileView = true
     }
+    else {
+        mobileView = false
+    }
+    console.log(mobileView)
+    update()
 })
