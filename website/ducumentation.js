@@ -13,4 +13,5 @@ function docs() {
     document.getElementById("myDropdown").style.display = "none";
     credit = false
     scroll(0, 0);
+    close()
 }

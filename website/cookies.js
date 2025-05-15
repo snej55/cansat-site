@@ -63,7 +63,7 @@ function update() {
             <li><a onclick="home()">Home</a></li>
             <li><a onclick="mission()">Our mission</a></li>
             <li><a onclick="docs()">Documentation</a></li>`
-        if (credit) {
+        if (!credit) {
             document.getElementById("PressOptions").innerHTML = `<a class="menu-item" id="credits" onclick="credits()">Credits</a>`
         }
         else {

@@ -20,6 +20,7 @@ function home() {
     document.getElementById("myDropdown").style.display = "none";
     scroll(0, 0);
     credit = false
+    close()
 }
 
 home()

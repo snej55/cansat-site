@@ -47,4 +47,5 @@ function credits() {
     document.getElementById("myDropdown").style.display = "none";
     scroll(0, 0);
     credit = true
+    close()
 }
