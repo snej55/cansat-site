@@ -27,6 +27,7 @@ function credits() {
    <h2> code for satelite:</h2>
     Nathan yin <br>
     Jens kromdijk <br>
+    Jan Lukasiak <br>
 
 
 `
