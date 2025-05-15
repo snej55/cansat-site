@@ -23,16 +23,16 @@ function credits() {
    <h2> prototyping:</h2>
     Dylan greenwood <br>
     Nathan yin <br><br>
-
+    <br>
    <h2> code for satelite:</h2>
     Nathan yin <br>
     Jens kromdijk <br>
     Jan Lukasiak <br>
-
+    <br>
     <h2>testing:</h2>
     Dylan greenwood <br>
     Sebastian thornton<br>
-
+    <br>
     <h2>3d modeling and printing:</h2>
     Nathan yin <br>
     Dylan greenwood >br>
