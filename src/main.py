@@ -8,13 +8,24 @@ from bmp280 import *
 import MPU6050
 import time
 
+# oled screen
+from ssd1306 import SSD1306_I2C
+
 class CanSat:
     def __init__(self):
+        # bmp280
         self.bmp = None
         self.init_bmp(0, 1)
         
+        # mpu6050
         self.mpu = None
         self.init_mpu(None)
+        
+        # oled screen
+        self.width = 128
+        self.height = 64
+        self.oled = None
+        #self.init_oled(3, 2)
 
     # ----- BMP280 ------ #
 
@@ -70,6 +81,13 @@ class CanSat:
     # Print the temperature in Celsius as a float
     def get_temp_data_mpu(self):
         return self.mpu.read_temperature()
+    
+    # ----- SSD1306 ----- #
+    
+    # initialize oled screen
+    def init_oled(self, sda_pin, scl_pin):
+        bus = I2C(0, sda=machine.Pin(sda_pin), scl=machine.Pin(scl_pin), freq=19000)
+        self.oled = SSD1306_I2C(self.width, self.height, bus)
 
 if __name__ == "__main__":
     cansat = CanSat()
