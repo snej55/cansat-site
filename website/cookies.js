@@ -57,7 +57,8 @@ function update() {
         <a class="menu-item" id="credits" onclick="credits()">Our Misison</a>
         <a class="menu-item" id="credits" onclick="credits()">Documentation</a>
         <a class="menu-item" id="credits" onclick="credits()">Credits</a>`
-        document.getElementById("PressOptions").style.paddingTop = "12px"
+        document.getElementById("PressOptions").style.paddingTop = "10px"
+        document.getElementById("theme").style.borderBottom = "#8888 solid 1px"
     }
     else {
         document.getElementById("options").innerHTML = `            
@@ -65,7 +66,8 @@ function update() {
             <li><a onclick="mission()">Our mission</a></li>
             <li><a onclick="docs()">Documentation</a></li>`
         document.getElementById("PressOptions").innerHTML = `<a class="menu-item" id="credits" onclick="credits()">Credits</a>`
-        document.getElementById("PressOptions").style.paddingTop = "2px"
+        document.getElementById("PressOptions").style.paddingTop = "0px"
+        document.getElementById("theme").style.borderBottom = "none"
     }
 }
 

@@ -10,7 +10,7 @@
     --main-grey: #696c70;
     --main-dark-grey: #33373a;
     --main-black: #1a1a1e;
-    --link-color: var(--main-white);
+    --link-color: var(--main-orange);
 }
 
 * {
@@ -114,6 +114,10 @@ div#header > a {
     margin-right: 20px;
     margin-left: auto;
     font-size: 18px;
+}
+
+div#theme {
+    padding-bottom: 2px;
 }
 
 .icon-menu {
