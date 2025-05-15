@@ -18,6 +18,9 @@ class CanSat:
         self.bmp = None
         self.init_bmp(0, 1)
         
+        # base pressure
+        self.base_pressure = 102325
+        
         # mpu6050
         self.mpu = None
         self.init_mpu(None)
@@ -66,8 +69,16 @@ class CanSat:
         return self.get_altitude_from_pressure(pressure)
     
     def get_altitude_from_pressure(self, pressure):
-        altitude = 44330 * (1 - (pressure / 102325) ** (1 / 5.5255))
+        altitude = 44330 * (1 - (pressure / self.base_pressure) ** (1 / 5.5255))
         return altitude
+    
+    def calibrate_pressure(self, trials=5, tick=0.5):
+        pressures = []
+        for i in range(trials):
+            pressures.append(self.get_pressure_bmp())
+            time.sleep(tick)
+        self.base_pressure = sum(pressures) / len(pressures)
+        
     
     # ------ MPU6050 ------ #
     

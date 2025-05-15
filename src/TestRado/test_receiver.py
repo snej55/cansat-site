@@ -35,7 +35,7 @@ print( 'NODE            :', rfm.node )
 
 print("Waiting for packets...")
 while True:
-	packet = rfm.receive( with_ack=True )
+	packet = rfm.receive( with_ack=False )
 	# Optionally change the receive timeout from its default of 0.5 seconds:
 	# packet = rfm.receive(timeout=5.0)
 	# If no packet was received during the timeout then None is returned.
