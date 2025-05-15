@@ -1,3 +1,8 @@
+"""
+A basic class for our CanSat, with interfaces for our different sensors.
+It uses the BMP280 for temperature and pressure, and the MPU6050 for acceleration and gyro axis.
+"""
+
 from machine import Pin, I2C
 from bmp280 import *
 import MPU6050
@@ -38,6 +43,15 @@ class CanSat:
         pressure = self.bmp.pressure
         # convert from Pa to bar
         return pressure / 100000
+
+    def get_altitude_bmp(self):
+        pressure = self.get_pressure_bmp()
+        # use barometric equation to estimate altitude
+        return self.get_altitude_from_pressure(pressure)
+    
+    def get_altitude_from_pressure(self, pressure):
+        altitude = 44330 * (1 - (pressure / 102325) ** (1 / 5.5255))
+        return altitude
     
     # ------ MPU6050 ------ #
     
@@ -59,8 +73,18 @@ class CanSat:
 
 if __name__ == "__main__":
     cansat = CanSat()
+    pressures = []
     while True:
         print(f"Temperature: {cansat.get_temperature_bmp()} C")
-        print(f"Pressure: {cansat.get_pressure_bmp()} Pa | {cansat.get_pressure_bar_bmp()} bar")
+        # keep track of last five pressure readings
+        pressures.append(cansat.get_pressure_bmp())
+        if len(pressures) > 5:
+            pressures.pop(0)
+        # real pressure for comparison
+        real_pressure = cansat.get_pressure_bmp()
+        # calculate weighted average for pressures
+        average_pressure = (sum(pressures) + real_pressure) / (len(pressures) + 1)
+        print(f"Pressure: {average_pressure} Pa (average) {real_pressure} Pa (real) | {cansat.get_pressure_bar_bmp()} bar")
+        print(f"Altitude: {cansat.get_altitude_from_pressure(average_pressure) :.2f} m")
         time.sleep(0.5)
 
