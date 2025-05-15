@@ -29,6 +29,14 @@ function credits() {
     Jens kromdijk <br>
     Jan Lukasiak <br>
 
+    <h2>testing:</h2>
+    Dylan greenwood <br>
+    Sebastian thornton<br>
+
+    <h2>3d modeling and printing:</h2>
+    Nathan yin <br>
+    Dylan greenwood >br>
+
 
 `
     menuOpen = false;
