@@ -78,7 +78,6 @@ class CanSat:
             pressures.append(self.get_pressure_bmp())
             time.sleep(tick)
         self.base_pressure = sum(pressures) / len(pressures)
-        
     
     # ------ MPU6050 ------ #
     
