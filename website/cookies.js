@@ -53,12 +53,19 @@ function update() {
     }
     if (mobileView) {
         document.getElementById("options").innerHTML = ``
+        document.getElementById("PressOptions").innerHTML = `<a class="menu-item" id="credits" onclick="credits()">Home</a>
+        <a class="menu-item" id="credits" onclick="credits()">Our Misison</a>
+        <a class="menu-item" id="credits" onclick="credits()">Documentation</a>
+        <a class="menu-item" id="credits" onclick="credits()">Credits</a>`
+        document.getElementById("PressOptions").style.paddingTop = "12px"
     }
     else {
         document.getElementById("options").innerHTML = `            
             <li><a onclick="home()">Home</a></li>
             <li><a onclick="mission()">Our mission</a></li>
             <li><a onclick="docs()">Documentation</a></li>`
+        document.getElementById("PressOptions").innerHTML = `<a class="menu-item" id="credits" onclick="credits()">Credits</a>`
+        document.getElementById("PressOptions").style.paddingTop = "2px"
     }
 }
 
@@ -73,19 +80,21 @@ function toggleBackground() {
     close()
 }
 
-update()
-
-
-
 addEventListener("resize", (event) => { 
-    console.log(window.innerWidth)
-
     if (window.innerWidth  <= 700) {
         mobileView = true
     }
     else {
         mobileView = false
     }
-    console.log(mobileView)
     update()
 })
+
+if (window.innerWidth  <= 700) {
+    mobileView = true
+}
+else {
+    mobileView = false
+}
+
+update()
