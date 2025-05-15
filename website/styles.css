@@ -126,7 +126,7 @@ div#heaver:hover > .icon-menu {
 }
 
 div#content {
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 30px;
     width: 1400px;
     max-width: 80vw;
@@ -233,4 +233,28 @@ footer > div > div > a:hover {
 
 #myDropdown > div#theme > a:last-child { 
     background-color: #fff;
+}
+
+h1 {
+    font-size: 160%;
+}
+
+h2 {
+    font-size: 120%;
+}
+
+h3 {
+    font-size: 100%;
+}
+
+h4 {
+    font-size: 80%;
+}
+
+h5 {
+    font-size: 65%;
+}
+
+h6 {
+    font-size: 55%;
 }
