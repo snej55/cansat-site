@@ -20,9 +20,6 @@ function credits() {
     Sebastian thornton <br>
     Dylan greenwood <br><br>
 
-   <h2>prototyping:</h2>
-    Dylan greenwood <br><br>
-
    <h2> prototyping:</h2>
     Dylan greenwood <br>
     Nathan yin <br><br>
