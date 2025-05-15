@@ -14,20 +14,20 @@ function credits() {
     Jan Lukasiak <br>
     Jens kromdijk <br>
     Dylan greenwood <br>
-    Sebastian thornton
- <br>
-   <b> parachute design:</b> <br>
+    Sebastian thornton <br><br>
+
+   <h1> parachute design:</h1>
     Sebastian thornton <br>
     Dylan greenwood <br><br>
 
    <h2>prototyping:</h2>
+    Dylan greenwood <br><br>
+
+   <h2> prototyping:</h2>
     Dylan greenwood <br>
- <br>
-   <b> prototyping:</b> <br>
-    Dylan greenwood <br>
-    Nathan yin <br>
- <br>
-   <b> code for satelite:</b> <br>
+    Nathan yin <br><br>
+
+   <h2> code for satelite:</h2>
     Nathan yin <br>
     Jens kromdijk <br>
 
