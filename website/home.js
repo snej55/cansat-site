@@ -12,10 +12,12 @@ function home() {
 
     
 `
-    document.getElementById("credits").innerHTML = "Credits";
-    document.getElementById("credits").setAttribute( "onClick", "javascript: credits();" );
-    document.getElementById("myDropdown").style.display = "none";
-    scroll(0, 0);
+if (!mobileView) {
+        document.getElementById("credits").innerHTML = "Credits";
+        document.getElementById("credits").setAttribute( "onClick", "javascript: credits();" );
+        document.getElementById("myDropdown").style.display = "none";
+        scroll(0, 0);
+    }
 }
 
 home()

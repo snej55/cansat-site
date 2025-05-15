@@ -14,19 +14,21 @@
         <img id="CastAway" src="public/images/logo128.png" alt="" onclick="home()">
         <h2 onclick="home()">CastAway</h2>
         
-        <ul>
-            <li><a onclick="home()">Home</a></li>
+        <ul id="options">
+            <!-- <li><a onclick="home()">Home</a></li>
             <li><a onclick="mission()">Our mission</a></li>
-            <li><a onclick="docs()">Documentation</a></li>
+            <li><a onclick="docs()">Documentation</a></li> -->
         </ul>
         <a onclick="menu()"><i class="demo-icon icon-menu">More</i></a>
         <div id="myDropdown" class="dropdown-content">
-            <div>
+            <div id="theme">
                 Theme &nbsp; 
                 <a class="menu-item" onclick="toggleBackground(document.cookie = 'background: 0;')"></a>
                 <a class="menu-item" onclick="toggleBackground(document.cookie = 'background: 1;')"></a>
             </div>
-            <a class="menu-item" id="credits" onclick="credits()">Credits</a>
+            <div id="PressOptions">
+                <a class="menu-item" id="credits" onclick="credits()">Credits</a>
+            </div>
         </div>
     </div>
     <div id="content">

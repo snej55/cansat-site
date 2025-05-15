@@ -1,4 +1,5 @@
 let menuOpen = false
+let mobileView = false
 
 if (document.cookie == "") {
 document.cookie = 'background: 0;'
@@ -50,6 +51,24 @@ function update() {
         document.getElementById("credits").style.color = "#000"
         document.documentElement.style.setProperty('--link-color', 'var(--main-orange)')
     }
+    if (mobileView) {
+        document.getElementById("options").innerHTML = ``
+        document.getElementById("PressOptions").innerHTML = `<a class="menu-item" id="credits" onclick="credits()">Home</a>
+        <a class="menu-item" id="credits" onclick="credits()">Our Misison</a>
+        <a class="menu-item" id="credits" onclick="credits()">Documentation</a>
+        <a class="menu-item" id="credits" onclick="credits()">Credits</a>`
+        document.getElementById("PressOptions").style.paddingTop = "10px"
+        document.getElementById("theme").style.borderBottom = "#8888 solid 1px"
+    }
+    else {
+        document.getElementById("options").innerHTML = `            
+            <li><a onclick="home()">Home</a></li>
+            <li><a onclick="mission()">Our mission</a></li>
+            <li><a onclick="docs()">Documentation</a></li>`
+        document.getElementById("PressOptions").innerHTML = `<a class="menu-item" id="credits" onclick="credits()">Credits</a>`
+        document.getElementById("PressOptions").style.paddingTop = "0px"
+        document.getElementById("theme").style.borderBottom = "none"
+    }
 }
 
 function toggleBackground() {
@@ -63,10 +82,21 @@ function toggleBackground() {
     close()
 }
 
-update()
-
 addEventListener("resize", (event) => { 
-    if (document.body.style.width  <= 650) {
-        console.log(document.body.style.width)
+    if (window.innerWidth  <= 700) {
+        mobileView = true
     }
+    else {
+        mobileView = false
+    }
+    update()
 })
+
+if (window.innerWidth  <= 700) {
+    mobileView = true
+}
+else {
+    mobileView = false
+}
+
+update()
