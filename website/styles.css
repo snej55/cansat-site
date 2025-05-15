@@ -130,7 +130,7 @@ div#heaver:hover > .icon-menu {
 }
 
 div#content {
-    font-size: 18px;
+    font-size: 17px;
     margin-top: 30px;
     width: 1400px;
     max-width: 80vw;
@@ -245,21 +245,21 @@ h1 {
 }
 
 h2 {
-    font-size: 120%;
+    font-size: 130%;
 }
 
 h3 {
-    font-size: 100%;
+    font-size: 110%;
 }
 
 h4 {
-    font-size: 80%;
+    font-size: 95%;
 }
 
 h5 {
-    font-size: 65%;
+    font-size: 80%;
 }
 
 h6 {
-    font-size: 55%;
+    font-size: 65%;
 }
