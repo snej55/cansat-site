@@ -1,12 +1,10 @@
 let menuOpen = false
 let mobileView = false
+let credit = false
 
 if (document.cookie == "") {
 document.cookie = 'background: 0;'
 }
-
-document.getElementById("myDropdown").style.display = "none";
-
 
 function menu() {
     if (menuOpen) {
@@ -53,9 +51,9 @@ function update() {
     }
     if (mobileView) {
         document.getElementById("options").innerHTML = ``
-        document.getElementById("PressOptions").innerHTML = `<a class="menu-item" id="credits" onclick="credits()">Home</a>
-        <a class="menu-item" id="credits" onclick="credits()">Our Misison</a>
-        <a class="menu-item" id="credits" onclick="credits()">Documentation</a>
+        document.getElementById("PressOptions").innerHTML = `<a class="menu-item" onclick="home()">Home</a>
+        <a class="menu-item" onclick="mission()">Our Misison</a>
+        <a class="menu-item" onclick="docs()">Documentation</a>
         <a class="menu-item" id="credits" onclick="credits()">Credits</a>`
         document.getElementById("PressOptions").style.paddingTop = "10px"
         document.getElementById("theme").style.borderBottom = "#8888 solid 1px"
@@ -65,7 +63,12 @@ function update() {
             <li><a onclick="home()">Home</a></li>
             <li><a onclick="mission()">Our mission</a></li>
             <li><a onclick="docs()">Documentation</a></li>`
-        document.getElementById("PressOptions").innerHTML = `<a class="menu-item" id="credits" onclick="credits()">Credits</a>`
+        if (credit) {
+            document.getElementById("PressOptions").innerHTML = `<a class="menu-item" id="credits" onclick="credits()">Credits</a>`
+        }
+        else {
+            document.getElementById("PressOptions").innerHTML = `<a class="menu-item" id="credits" onclick="home()">Home</a>`
+        }
         document.getElementById("PressOptions").style.paddingTop = "0px"
         document.getElementById("theme").style.borderBottom = "none"
     }

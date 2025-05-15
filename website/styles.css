@@ -175,6 +175,7 @@ footer > div > div > a:hover {
 }
 
 #myDropdown {
+    display: none;
     min-width: 150px;
     padding: 10px;
     position: fixed;

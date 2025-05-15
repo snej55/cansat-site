@@ -39,9 +39,12 @@ function credits() {
 
 
 `
+    if (!mobileView) {
+        document.getElementById("credits").innerHTML = "Home";
+        document.getElementById("credits").setAttribute( "onClick", "javascript: home();" );
+    }
     menuOpen = false;
-    document.getElementById("credits").innerHTML = "Home";
-    document.getElementById("credits").setAttribute( "onClick", "javascript: home();" );
     document.getElementById("myDropdown").style.display = "none";
     scroll(0, 0);
+    credit = true
 }

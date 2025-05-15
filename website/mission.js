@@ -32,10 +32,12 @@ function mission() {
         <li>Gaining local media coverage.</li>
     </ul>
 `
-if (!mobileView) {
+    if (!mobileView) {
         document.getElementById("credits").innerHTML = "Credits";
         document.getElementById("credits").setAttribute( "onClick", "javascript: credits();" );
-        document.getElementById("myDropdown").style.display = "none";
-        scroll(0, 0);
     }
+    menuOpen = false;
+    document.getElementById("myDropdown").style.display = "none";
+    scroll(0, 0);
+    credit = false
 }

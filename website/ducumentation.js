@@ -5,8 +5,12 @@ function docs() {
     we done this to leve as much of our budget for the final build and not all for the protottype to give us the best <br>
     satelite we can get out of the budget we have.
 `
-    document.getElementById("credits").innerHTML = "Credits";
-    document.getElementById("credits").setAttribute( "onClick", "javascript: credits();" );
+    if (!mobileView) {
+        document.getElementById("credits").innerHTML = "Credits";
+        document.getElementById("credits").setAttribute( "onClick", "javascript: credits();" );
+    }
+    menuOpen = false;
     document.getElementById("myDropdown").style.display = "none";
+    credit = false
     scroll(0, 0);
 }
