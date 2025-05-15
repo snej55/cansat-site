@@ -10,6 +10,7 @@ function docs() {
         <li>schematic </li>
         <li>prototype parachute </li>
     </ul> <br>
+    <img src="../src/assets/Screenshot 2025-05-15 at 19.37.39 - transparent.png">
     hello
 
 `
