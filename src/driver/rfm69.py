@@ -245,7 +245,9 @@ class RFM69:
 		self.spi_write( RFM69_REG_OPMODE, (self.spi_read( RFM69_REG_OPMODE ) & 0xE3) | newMode)
 		# Wait for the mode change by pulling the interrupt bit
 		start = ticks_ms()
-
+		while not self.spi_read( RFM69_REG_IRQ_FLAGS1 ) & 0b10000000:
+			if ticks_diff( ticks_ms(), start ) >= 1000:
+				raise RuntimeError( 'Change mode timeout!' )
 		self._mode = newMode
 		return newMode
 

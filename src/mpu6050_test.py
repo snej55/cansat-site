@@ -1,6 +1,8 @@
 import machine
 import time
 import MPU6050
+import sys
+
 
 # Set up the I2C interface
 i2c = machine.I2C(1, sda=machine.Pin(14), scl=machine.Pin(15))
@@ -11,23 +13,23 @@ mpu = MPU6050.MPU6050(i2c)
 # wake up the MPU6050 from sleep
 mpu.wake()
 
-# continuously print the data
-initial_velocity = 0
-final_velocity = 0
-time_elap = 0
+mpu.write_lpf_range(6)  # reduce noise
 
-
-# x = accel[0]
-# y = accel[1]
-# z = accel[2]
 while True:
-    gyro = mpu.read_gyro_data()
-    accel = mpu.read_accel_data()
-    #temp = mpu.read_temperature()
-    #print("Gyro: " + str(gyro) + ", Accel: " + str(accel))
+    x_accel, y_accel, z_accel = mpu.read_accel_data() # Outputs the acceleration raw data in g
+
+    temp = mpu.read_temperature()
 
 
-    print(gyro)
+    
+    data_sent = mpu.read_accel_data() + (temp, )
+
+    print(data_sent)
+  
+
+
     #print(temp)
     time.sleep(0.1)
+
+
 

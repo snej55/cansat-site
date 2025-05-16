@@ -1,51 +1,53 @@
-""" CANSAT PICO RECEIVER node
-
-Receives message requiring ACK over RFM69HCW SPI module - RECEIVER node
-Must be tested togheter with test_emitter
-
-See Tutorial : https://wiki.mchobby.be/index.php?title=ENG-CANSAT-PICO-RFM69HCW-TEST
-See GitHub : https://github.com/mchobby/cansat-belgium-micropython/tree/main/test-rfm69
-
-RFM69HCW breakout : https://shop.mchobby.be/product.php?id_product=1390
-RFM69HCW breakout : https://www.adafruit.com/product/3071
-"""
-
-from machine import SPI, Pin
-from rfm69 import RFM69
 import time
+import board
+import busio
+import digitalio
 
-FREQ           = 433.1
-ENCRYPTION_KEY = b"\x01\x02\x03\x04\x05\x06\x07\x08\x01\x02\x03\x04\x05\x06\x07\x08"
-NODE_ID        = 100 # ID of this node
 
-spi = SPI(0, polarity=0, phase=0, firstbit=SPI.MSB) # baudrate=50000,
-nss = Pin( 5, Pin.OUT, value=True )
-rst = Pin( 3, Pin.OUT, value=False )
+import adafruit_rfm69
 
-rfm = RFM69( spi=spi, nss=nss, reset=rst )
-rfm.frequency_mhz = FREQ
+# basic on board led
+led = digitalio.DigitalInOut(board.LED)
+led.direction = digitalio.Direction.OUTPUT
+led.value = False  # turn off led
 
-# Optionally set an encryption key (16 byte AES key). MUST match both
-# on the transmitter and receiver (or be set to None to disable/the default).
-rfm.encryption_key = ( ENCRYPTION_KEY )
-rfm.node = NODE_ID # This instance is the node 123
 
-print( 'Freq            :', rfm.frequency_mhz )
-print( 'NODE            :', rfm.node )
 
-print("Waiting for packets...")
+# radio
+FREQ = 433.0
+spi = busio.SPI(board.GP2, MOSI=board.GP3, MISO=board.GP0)
+cs = digitalio.DigitalInOut(board.GP1)
+reset = digitalio.DigitalInOut(board.GP4)
+rfm69 = adafruit_rfm69.RFM69(spi, cs, reset, FREQ)
+
+# uncomment to enable encryption
+# rfm69.encryption_key = (
+#     b"\x01\x02\x03\x04\x05\x06\x07\x08\x01\x02\x03\x04\x05\x06\x07\x08"
+# )
+
+listen = False
+count = 0
+msg = ''
 while True:
-	packet = rfm.receive( with_ack=True )
-	# Optionally change the receive timeout from its default of 0.5 seconds:
-	# packet = rfm.receive(timeout=5.0)
-	# If no packet was received during the timeout then None is returned.
-	if packet is None:
-		# Packet has not been received
-		pass
-	else:
-		# Received a packet!
-		print( "Received (raw bytes):", packet )
-		# And decode to ASCII text
-		packet_text = str(packet, "ascii")
-		print("Received (ASCII):", packet_text)
-		print("-"*40)
+
+    if not listen:
+        if button_left.value:
+            FREQ = round(FREQ + 0.1, 1)
+            rfm69.frequency_mhz = FREQ
+
+        if button_right.value:
+            FREQ = round(FREQ - 0.1, 1)
+            rfm69.frequency_mhz = FREQ
+
+
+            led.value = True
+
+
+
+    if listen:
+        packet = rfm69.receive()
+        if packet is not None:
+            packet_text = str(packet, 'ascii')
+            msg = packet_text
+            print('Received: {0}'.format(packet_text))
+            count = count + 1
