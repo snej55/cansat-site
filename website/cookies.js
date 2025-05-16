@@ -63,7 +63,7 @@ function update() {
             <li onclick="home()"><a>Home</a></li>
             <li onclick="mission()"><a>Our mission</a></li>
             <li onclick="docs()"><a>Documentation</a></li>`
-        document.getElementById("PressOptions").innerHTML = `<a class="menu-item" id="credits" onclick="credits()">Credits</a>`
+        document.getElementById("PressOptions").innerHTML = `<a class="menu-item" id="credits" onclick="credits()">Credits</a>
             <li><a onclick="home()">Home</a></li>
             <li><a onclick="mission()">Our mission</a></li>
             <li><a onclick="docs()">Documentation</a></li>`
