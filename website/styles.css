@@ -52,7 +52,7 @@ div#header > img#CastAway {
 }
 
 div#header > img#CastAway:hover {
-    animation: spin 1s infinite linear;
+    animation: spin 0.1s infinite linear;
     animation-delay: 2s;
 }
 
