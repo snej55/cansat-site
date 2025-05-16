@@ -2,15 +2,11 @@ function credits() {
 
     item.innerHTML = `<h1>Credits</h1><br>
 
-    <h3>landing gear design:</h3>
-    Dylan greenwood <br>
-    Nathan yin <br><br>
-
    <h3>logo design:</h3>
     Nick zyuzin <br>
     Sebastian thornton <br><br>
 
-   <h3>web design:</h3>
+   <h3>Website:</h3>
     Jan Lukasiak <br>
     Jens kromdijk <br>
     Dylan greenwood <br>
