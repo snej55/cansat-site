@@ -1,9 +1,14 @@
 let menuOpen = false
 let mobileView = false
 let credit = false
+let background = false
 
 if (document.cookie == "") {
 document.cookie = 'background: 0;'
+background = 0;
+}
+else if (document.cookie.trim().startsWith("background: 1")) {
+    background = 1
 }
 
 function menu() {
@@ -23,7 +28,7 @@ function close() {
 }
 
 function update() {
-    if (document.cookie.trim().startsWith("background: 1")) {
+    if (background) {
         document.body.style.backgroundColor = "var(--main-dark-grey)"
         document.getElementById("myDropdown").style.color = "#fff"
         document.getElementById("myDropdown").style.border = "var(--main-blue) solid 2px"
@@ -60,6 +65,10 @@ function update() {
     }
     else {
         document.getElementById("options").innerHTML = `            
+            <li onclick="home()"><a>Home</a></li>
+            <li onclick="mission()"><a>Our mission</a></li>
+            <li onclick="docs()"><a>Documentation</a></li>`
+        document.getElementById("PressOptions").innerHTML = `<a class="menu-item" id="credits" onclick="credits()">Credits</a>
             <li><a onclick="home()">Home</a></li>
             <li><a onclick="mission()">Our mission</a></li>
             <li><a onclick="docs()">Documentation</a></li>`
@@ -75,10 +84,12 @@ function update() {
 }
 
 function toggleBackground() {
-    if (document.cookie.trim().startsWith("background: 0")) {
+    if (background == 0) {
+        background = 1
         document.cookie = "background: 1;"
     }
     else {
+        background = 0
         document.cookie = "background: 0;"
     }
     update();
