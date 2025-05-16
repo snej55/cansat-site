@@ -36,7 +36,7 @@ function credits() {
     <h3>3d modeling and printing:</h3>
     Nathan yin <br>
     Dylan greenwood <br>
-    hello donald
+    
 
 
 `
