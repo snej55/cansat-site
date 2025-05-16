@@ -1,6 +1,7 @@
 """
 A basic class for our CanSat, with interfaces for our different sensors.
 It uses the BMP280 for temperature and pressure, and the MPU6050 for acceleration and gyro axis.
+It also has support for an SSD1306 OLED screen, and a pwm buzzer.
 """
 
 from machine import Pin, I2C
@@ -17,6 +18,9 @@ class CanSat:
         self.bmp = None
         self.init_bmp(0, 1)
         
+        # base pressure
+        self.base_pressure = 102325
+        
         # mpu6050
         self.mpu = None
         self.init_mpu(None)
@@ -26,6 +30,10 @@ class CanSat:
         self.height = 64
         self.oled = None
         #self.init_oled(3, 2)
+        
+        # buzzer
+        self.buzzer = None
+        self.init_buzzer()
 
     # ----- BMP280 ------ #
 
@@ -61,8 +69,15 @@ class CanSat:
         return self.get_altitude_from_pressure(pressure)
     
     def get_altitude_from_pressure(self, pressure):
-        altitude = 44330 * (1 - (pressure / 102325) ** (1 / 5.5255))
+        altitude = 44330 * (1 - (pressure / self.base_pressure) ** (1 / 5.5255))
         return altitude
+    
+    def calibrate_pressure(self, trials=5, tick=0.5):
+        pressures = []
+        for i in range(trials):
+            pressures.append(self.get_pressure_bmp())
+            time.sleep(tick)
+        self.base_pressure = sum(pressures) / len(pressures)
     
     # ------ MPU6050 ------ #
     
@@ -88,9 +103,23 @@ class CanSat:
     def init_oled(self, sda_pin, scl_pin):
         bus = I2C(0, sda=machine.Pin(sda_pin), scl=machine.Pin(scl_pin), freq=19000)
         self.oled = SSD1306_I2C(self.width, self.height, bus)
+        
+    # ----- Buzzer ----- #
+    def init_buzzer(self):
+        self.buzzer = machine.PWM(machine.Pin(15))
+    
+    # set the frequency for the buzzer
+    def set_buzzer_freq(self, freq):
+        self.buzzer.freq(freq)
+    
+    # set the volume for the buzzer (range 0-32_767)
+    def set_buzzer_volume(self, volume):
+        volume = min(32767, max(0, volume))
+        self.buzzer.duty_u16(volume)
 
 if __name__ == "__main__":
     cansat = CanSat()
+    cansat.set_buzzer_freq(2220)
     pressures = []
     while True:
         print(f"Temperature: {cansat.get_temperature_bmp()} C")
@@ -105,4 +134,8 @@ if __name__ == "__main__":
         print(f"Pressure: {average_pressure} Pa (average) {real_pressure} Pa (real) | {cansat.get_pressure_bar_bmp()} bar")
         print(f"Altitude: {cansat.get_altitude_from_pressure(average_pressure) :.2f} m")
         time.sleep(0.5)
+        if (cansat.get_altitude_bmp() > 3):
+            cansat.set_buzzer_volume(2000)
+        else:
+            cansat.set_buzzer_volume(0)
 

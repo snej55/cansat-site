@@ -5,19 +5,20 @@ function home() {
 // <ul> bullet point list </ul>
 // <li> line </li>
 
-    item.innerHTML = `<h1>Our Mission</h1>
-    <h3>We aspire to be the best we can be.</h3>
-    <h3>We inspire new scientists and engineers.</h3>
-    <h3>We respire to live.</h3>
+    item.innerHTML = `<h1>Home</h1>
+    We are a team of young engineers
 
     
 `
-if (!mobileView) {
+    if (!mobileView) {
         document.getElementById("credits").innerHTML = "Credits";
         document.getElementById("credits").setAttribute( "onClick", "javascript: credits();" );
-        document.getElementById("myDropdown").style.display = "none";
-        scroll(0, 0);
     }
+    menuOpen = false;
+    document.getElementById("myDropdown").style.display = "none";
+    scroll(0, 0);
+    credit = false
+    close()
 }
 
 home()
