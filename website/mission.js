@@ -36,8 +36,13 @@ function mission() {
     from which point it will start collecting data. It will deploy a parachute at its highest 
     altitude, in order to slow its rate of descent to between 10 and 15 m/s (22 and 34 mph).
 `
-    document.getElementById("credits").innerHTML = "Credits";
-    document.getElementById("credits").setAttribute( "onClick", "javascript: credits();" );
+    if (!mobileView) {
+        document.getElementById("credits").innerHTML = "Credits";
+        document.getElementById("credits").setAttribute( "onClick", "javascript: credits();" );
+    }
+    menuOpen = false;
     document.getElementById("myDropdown").style.display = "none";
     scroll(0, 0);
+    credit = false
+    close()
 }

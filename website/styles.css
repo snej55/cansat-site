@@ -10,7 +10,7 @@
     --main-grey: #696c70;
     --main-dark-grey: #33373a;
     --main-black: #1a1a1e;
-    --link-color: var(--main-white);
+    --link-color: var(--main-orange);
 }
 
 * {
@@ -44,9 +44,11 @@ div#header > img#CastAway {
 
 @keyframes spin {
     0% {
+        transform: scale(1,1);
         transform: rotate(0deg);
     }
     100% {
+        transform: scale(2,2);
         transform: rotate(360deg);
     }
 }
@@ -116,6 +118,10 @@ div#header > a {
     font-size: 18px;
 }
 
+div#theme {
+    padding-bottom: 2px;
+}
+
 .icon-menu {
     cursor: pointer;
     transition: 0.3s;
@@ -126,6 +132,7 @@ div#heaver:hover > .icon-menu {
 }
 
 div#content {
+    font-size: 17px;
     margin-top: 30px;
     width: 1400px;
     max-width: 80vw;
@@ -170,6 +177,8 @@ footer > div > div > a:hover {
 }
 
 #myDropdown {
+    display: none;
+    min-width: 150px;
     padding: 10px;
     position: fixed;
     right: 20px;
@@ -180,10 +189,17 @@ footer > div > div > a:hover {
     background-color: var(--main-light-grey);
 }
 
-#myDropdown > .menu-item {
+#myDropdown > div#PressOptions {
+    padding-top: 4px;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+}
+
+#myDropdown > div#PressOptions > .menu-item {
+    color: inherit;
     text-decoration: none;
-    color: #fff;
-    min-width: 150px;
+    /* color: #fff; */
     padding: 5px;
     margin: 0px;
     transition: 0.25s ease-out;
@@ -193,14 +209,14 @@ footer > div > div > a:hover {
     background-color: #0000;
 }
 
-#myDropdown > .menu-item:hover {
+#myDropdown > div#PressOptions > .menu-item:hover {
     color: #000;
     border-left: 3px #6b6b6b solid;
     background-color: #cecece;
     transform: translate(2px, 0px);
 }
 
-#myDropdown > div {
+#myDropdown > div#theme {
     padding-left: 5px;
     display: flex;
     justify-items: center;
@@ -209,7 +225,7 @@ footer > div > div > a:hover {
 }
 
 
-#myDropdown > div > a {
+#myDropdown > div#theme > a {
     cursor: pointer;
     margin: 0 0 0 5px;
     width: 18px;
@@ -218,10 +234,38 @@ footer > div > div > a:hover {
     border-radius: 15.5px;
 }
 
-#myDropdown > div > a:first-child {
+#myDropdown > div#theme > a:first-child {
     background-color: #000;
 }
 
-#myDropdown > div > a:last-child { 
+#myDropdown > div#theme > a:last-child { 
     background-color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 160%;
+}
+
+h2 {
+    font-size: 130%;
+}
+
+h3 {
+    font-size: 100%;
+}
+
+h4 {
+    font-size: 80%;
+}
+
+h5 {
+    font-size: 60%;
+}
+
+h6 {
+    font-size: 45%;
 }

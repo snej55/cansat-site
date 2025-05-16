@@ -1,38 +1,47 @@
 function credits() {
 
-    item.innerHTML = `<h1>Credits</h1>
-    <h2>cansat</h2>
-    <br>
-    <b>landing gear design:</b> <br>
+    item.innerHTML = `<h1>Credits</h1><br>
+
+
+   <h3>Logo Design:</h3>
+    Nick Zyuzin <br>
+    Sebastian Thornton 
+
+   <h3>Web Design:</h3>
+    Jan Lukasiak <br>
+    Jens kromdijk <br>
+    Dylan Greenwood <br>
+    Sebastian Thornton <br><br>
+
+
+    <h3>Prototyping:</h3>
+    <br>Nathan yin <br>
     Dylan greenwood <br>
+    
+
+   <h3> code for satelite:</h3>
     Nathan yin <br>
- <br>
-   <b> logo design and team name:</b> <br>
-    nick zyuzin <br>
-    sebastian thornton <br>
- <br>
-   <b> web design:</b> <br>
-    jan Lukasiak <br>
-    jens kromdijk <br>
-    dylan greenwood <br>
-    sebastian thornton
- <br>
-   <b> parachute design:</b> <br>
-    sabastian thornton <br>
- <br>
-   <b> prototyping:</b> <br>
-    dylan greenwood <br>
-    nathan yin <br>
- <br>
-   <b> code for satelite:</b> <br>
-    nathan yin <br>
-    jens kromdijk <br>
+    Jens kromdijk <br>
+    Jan Lukasiak <br><br>
+
+    <h3>testing:</h3>
+    Dylan greenwood <br>
+    Sebastian thornton<br><br>
+
+    <h3>3d modeling and printing:</h3>
+    Nathan yin <br>
+    Dylan greenwood <br>
+    
 
 
 `
+    if (!mobileView) {
+        document.getElementById("credits").innerHTML = "Home";
+        document.getElementById("credits").setAttribute( "onClick", "javascript: home();" );
+    }
     menuOpen = false;
-    document.getElementById("credits").innerHTML = "Home";
-    document.getElementById("credits").setAttribute( "onClick", "javascript: home();" );
     document.getElementById("myDropdown").style.display = "none";
     scroll(0, 0);
+    credit = true
+    close()
 }
