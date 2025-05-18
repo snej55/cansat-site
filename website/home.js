@@ -6,7 +6,7 @@ function home() {
 // <li> line </li>
 
     item.innerHTML = `<h1>Home</h1>
-    <img src="public/images/logo.png">
+    <img draggable="false" src="public/images/logo.png">
     We are a team of young engineers 
 
     

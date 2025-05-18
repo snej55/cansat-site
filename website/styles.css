@@ -29,6 +29,10 @@ body {
     background-color: var(--main-white);
 }
 
+img {
+    user-select: none;
+}
+
 b {
     font-weight: 700;
 }

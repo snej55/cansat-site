@@ -13,5 +13,5 @@
 - [X] Make logo a badge
 - [X] Make buttons unselectable
 - [ ] Add credits link to footer - it's in the menu
-- [ ] Make images unselectable
+- [X] Make images unselectable
 - [ ] Make text align to the side of images.
