@@ -21,7 +21,7 @@ function App() {
             Email:&nbsp; cansat@ILoveBeans.uk.org
           </p>
           <div id="icons">
-            <a href="https://github.com/snej55/cansat-site" target="_blank"><i class="demo-icon icon-github-circled-alt2 git">Github</i></a>
+            <a id="github" href="https://github.com/snej55/cansat-site" target="_blank"><i class="demo-icon icon-github-circled-alt2 git">Github</i></a>
           </div>
         </div>
       </footer>
