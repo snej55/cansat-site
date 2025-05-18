@@ -34,9 +34,9 @@
 
 .docs-bullets > li > div {
     /* transition: 0.2s cubic-bezier(.06,-0.02,.48,-0.16); */
-    transition: 0.2s ease-in-out;
+    transition: 0.1s;
 }
 
 .docs-bullets > li:hover > div{
-    margin-left: 8px;
+    opacity: 0.75;
 }
