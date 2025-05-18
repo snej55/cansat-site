@@ -69,12 +69,10 @@ div#header {
     position: fixed;
     display: flex;
     align-items: center;
-    /* justify-content: left; */
     top: 0;
     width: 100vw;
     font-weight: 600;
     background-color: var(--main-dark-grey);
-    /* backdrop-filter: blur(10px) brightness(0.4); */
     padding: 8px 0;
     -moz-user-select: -moz-none;
     -khtml-user-select: none;
@@ -139,7 +137,6 @@ div#content {
     min-height: 100vh;
     align-self: center;
     padding: 50px 20px 0 50px;
-    /* background-color: var(--main-white); */
 }
 
 ul {
@@ -148,7 +145,6 @@ ul {
 
 footer {
     display: flex;
-    /* flex-direction: column; */
     justify-content: center;
     background-color: var(--main-dark-grey);
     color: #fff;
@@ -199,13 +195,10 @@ footer > div > div > a:hover {
 #myDropdown > div#PressOptions > .menu-item {
     color: inherit;
     text-decoration: none;
-    /* color: #fff; */
     padding: 5px;
     margin: 0px;
     transition: 0.25s ease-out;
     border-left: 3px #0000 solid;
-    cursor: pointer;
-    /* color: #fff; */
     background-color: #0000;
 }
 
