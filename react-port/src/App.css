@@ -57,6 +57,10 @@ div#header > button#menu {
   margin-right: 20px;
   margin-left: auto;
   font-size: 18px;
+  background-color: #0000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
 }
 
 div#header > img#CastAway {
@@ -117,6 +121,7 @@ div#content {
   min-height: 100vh;
   align-self: center;
   padding: 50px 20px 0 50px;
+  background-color: var(--main-white);
 }
 
 footer {
