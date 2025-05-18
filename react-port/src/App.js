@@ -30,9 +30,9 @@ function App() {
         <h2>CastAway</h2>
 
         <div id="options">
-          <button id="homeButton" onClick={() => {setPage("home")}}>Home</button>
-          <button id="docsButton" onClick={() => {setPage("docs")}}>Documentation</button>
-          <button id="missionButton" onClick={() => {setPage("mission")}}>Mission</button>
+          <button className="pageButton" onClick={() => {setPage("home")}}>Home</button>
+          <button className="pageButton" onClick={() => {setPage("docs")}}>Documentation</button>
+          <button className="pageButton" onClick={() => {setPage("mission")}}>Mission</button>
         </div>
 
         <button id="menu"><i class="demo-icon icon-menu">More</i></button>

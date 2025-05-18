@@ -53,7 +53,7 @@ div#header {
   user-select: none;
 }
 
-div#header > a#menu {
+div#header > button#menu {
   margin-right: 20px;
   margin-left: auto;
   font-size: 18px;
@@ -85,6 +85,28 @@ div#header > img#CastAway:hover {
 div#header > h2 {
   font-size: 20px;
   padding: 0 15px 0 8px;
+}
+
+div#header > div#options {
+  padding-left: 20px;
+  display: flex;
+}
+
+.pageButton {
+  padding: 0 15px;
+  color: #fff;
+  background-color: #fff0;
+  border: none;
+  height: max-content;
+  cursor: pointer;
+  border-bottom: 1px #fff0 solid;
+  text-decoration: none;
+  transition: 0.2s ease-in-out;
+}
+
+.pageButton:hover {
+  color: var(--link-color);
+  border-bottom: 1px #aaa9 solid;
 }
 
 div#content {
