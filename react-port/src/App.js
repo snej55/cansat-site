@@ -1,23 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+      <div id="header">
+        <img id="CastAway" src="images/logo128.png" alt="128*128 logo image" draggable="false"></img>
+        <h2>CastAway</h2>
+
+        <a id="menu"><i class="demo-icon icon-menu">More</i></a>
+      </div>
+      <div id="content">
+        <p id="main-text">
+          Main text
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      </div>
+      <footer>
+        <div>
+          <p>
+            This Project is Open Sourced Under GNU GENERAL PUBLIC LICENSE <br></br>
+            Email:&nbsp; cansat@ILoveBeans.uk.org
+          </p>
+          <div id="icons">
+            <a href="https://github.com/snej55/cansat-site" target="_blank"><i class="demo-icon icon-github-circled-alt2 git">Github</i></a>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
