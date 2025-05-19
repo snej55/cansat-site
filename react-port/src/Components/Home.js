@@ -2,13 +2,14 @@ import './Home.css';
 import { useState } from 'react';
 
 export function Home() {
-    const [darkMode, setDarkMode] = useState(false);
+    // const [darkMode, setDarkMode] = useState(false);
     return (
         <div className="page-content">
-            <div className={darkMode ? "theme-wrapper-dark" : "theme-wrapper-light"}>
+            {/* <div className={darkMode ? "theme-wrapper-dark" : "theme-wrapper-light"}>
                 Welcome to the home page!
                 <button onClick={() => {setDarkMode(!darkMode)}}>Change theme</button>
-            </div>
+            </div> */}
+            testing
         </div>
     )
 }

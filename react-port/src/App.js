@@ -6,7 +6,16 @@ import { Home } from './Components/Home';
 import { Docs } from './Components/Docs';
 import { Mission } from './Components/Mission';
 
+
 function App() {
+
+  const [darkMode, toogleDarkMode] = useState(false);
+
+  // var fontColor = {
+  //   color: {darkMode ? "#fff" : "#000"}
+  // }
+
+
   const [page, setPage] = useState('home');
 
   function getContent() {
@@ -25,14 +34,6 @@ function App() {
     }
   }
 
-  const bgColor = {
-    backgroundColor: "#0f0"
-  }
-
-  HTMLElement = {
-    main: "#f0f"
-  }
-
   return (
     <div className="App">
       <div id="header">
@@ -45,22 +46,24 @@ function App() {
           <button className="pageButton" onClick={() => {setPage("mission")}}>Mission</button>
         </div>
 
-        <button id="menu" onclick={console.log("pressed")}><i class="demo-icon icon-menu">More</i></button>
-        <div id="myDropdown" class="dropdown-content" style={bgColor}>
+        <button id="menu"><i className="demo-icon icon-menu">More</i></button>
+        <div id="myDropdown" className="dropdown-content">
             <div id="theme">
                 Theme &nbsp; 
-                <a class="menu-item" onclick="toggleBackground(background = 0,document.cookie = 'background: 0;')"></a>
-                <a class="menu-item" onclick="toggleBackground(background = 1,document.cookie = 'background: 1;')"></a>
+                <a class="menu-item"></a>
+                <a class="menu-item"></a>
             </div>
             <div id="PressOptions">
-                <a class="menu-item" id="credits" onclick="credits()">Credits</a>
+                <a className="menu-item" id="credits" onclick="credits()">Credits</a>
             </div>
+            <button onClick={() => toogleDarkMode(!darkMode)}>Change theme</button>
         </div>
       </div>
-      <div id="content">
+      <div id="content" color={darkMode ? "#fff" : "#000"}>
         {/* <p id="main-text"> */}
           {getContent()}
         {/* </p> */}
+        testing
         
       </div>
       <footer>
