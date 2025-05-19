@@ -17,6 +17,8 @@ function App() {
         return Docs();
       case "mission":
         return Mission();
+      case "credits":
+        return "";
       default:
         // return home page as default
         return Home();
@@ -49,7 +51,7 @@ function App() {
             Email:&nbsp; cansat@ILoveBeans.uk.org
           </p>
           <div id="icons">
-            <a id="github" href="https://github.com/snej55/cansat-site" target="_blank" rel="noreferrer"><i class="demo-icon icon-github-circled-alt2 git">Github</i></a>
+            <a id="github" href="https://github.com/snej55/cansat-site" target="_blank" rel="noreferrer"><i class="demo-icon icon-github-circled-alt2 git"></i></a>
           </div>
         </div>
       </footer>
