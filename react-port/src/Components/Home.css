@@ -1,0 +1,9 @@
+.theme-wrapper-dark {
+    background-color: #000;
+    color: #fff;
+}
+
+.theme-wrapper-light {
+    background-color: #fff;
+    color: #000;
+}
