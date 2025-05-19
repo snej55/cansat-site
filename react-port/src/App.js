@@ -25,6 +25,10 @@ function App() {
     }
   }
 
+  const bgColor = {
+    backgroundColor: "#0f0"
+  }
+
   return (
     <div className="App">
       <div id="header">
@@ -37,12 +41,23 @@ function App() {
           <button className="pageButton" onClick={() => {setPage("mission")}}>Mission</button>
         </div>
 
-        <button id="menu"><i class="demo-icon icon-menu">More</i></button>
+        <button id="menu" onclick={console.log("pressed")}><i class="demo-icon icon-menu">More</i></button>
+        <div id="myDropdown" class="dropdown-content" style={bgColor}>
+            <div id="theme">
+                Theme &nbsp; 
+                <a class="menu-item" onclick="toggleBackground(background = 0,document.cookie = 'background: 0;')"></a>
+                <a class="menu-item" onclick="toggleBackground(background = 1,document.cookie = 'background: 1;')"></a>
+            </div>
+            <div id="PressOptions">
+                <a class="menu-item" id="credits" onclick="credits()">Credits</a>
+            </div>
+        </div>
       </div>
       <div id="content">
-        <p id="main-text">
+        {/* <p id="main-text"> */}
           {getContent()}
-        </p>
+        {/* </p> */}
+        
       </div>
       <footer>
         <div>
