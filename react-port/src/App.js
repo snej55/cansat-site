@@ -29,6 +29,10 @@ function App() {
     backgroundColor: "#0f0"
   }
 
+  HTMLElement = {
+    main: "#f0f"
+  }
+
   return (
     <div className="App">
       <div id="header">
