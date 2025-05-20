@@ -30,6 +30,8 @@ function App() {
   let accentColor = darkMode ? root.blue : root.darkGrey
   let bgColor = darkMode ? root.black : root.white
   let textColor = darkMode ? "#fff" : "#000"
+  
+  document.documentElement.style.setProperty("--link-color", darkMode ? "var(--main-light-grey)" : "var(--main-orange)")
 
   const [page, setPage] = useState('home');
 
