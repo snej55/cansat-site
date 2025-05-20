@@ -6,15 +6,29 @@ import { Home } from './Components/Home';
 import { Docs } from './Components/Docs';
 import { Mission } from './Components/Mission';
 
+import { darkModeInnit } from './cookies';
 
 function App() {
 
-  const [darkMode, toogleDarkMode] = useState(true);
+  const [darkMode, toogleDarkMode] = useState(darkModeInnit);
 
-  // var fontColor = {
-  //   color: {darkMode ? "#fff" : "#000"}
-  // }
+  let root = {
+    red: "#b13e53",
+    orange: "#ef7d57",
+    yellow: "#ffcd75",
+    lime: "#a7f070",
+    green: "#28a754",
+    blue: "#257179",
+    white: "#f4f4f6",
+    lightGrey: "#adb0b5",
+    grey: "#696c70",
+    darkGrey: "#33373a",
+    black: "#1a1a1d",
+  }
 
+  let accentColor = darkMode ? root.blue : root.darkGrey
+  let bgColor = darkMode ? root.black : root.white
+  let textColor = darkMode ? "#fff" : "#000"
 
   const [page, setPage] = useState('home');
 
@@ -35,8 +49,8 @@ function App() {
   }
 
   return (
-    <div id="App">
-      <div id="header">
+    <div id="App" style={{backgroundColor: bgColor}}>
+      <div id="header" style={{backgroundColor: accentColor}}>
         <img id="CastAway" src="images/logo128.png" alt="128*128 logo" draggable="false"></img>
         <h2>CastAway</h2>
 
@@ -56,17 +70,17 @@ function App() {
             <div id="PressOptions">
                 <a className="menu-item" id="credits" onclick="credits()">Credits</a>
             </div>
-            <button onClick={() => toogleDarkMode(!darkMode)}>Change theme</button>
+            <button onClick={() => {toogleDarkMode(0); document.cookie = "background: 0"}}>white</button>
+            <button onClick={() => {toogleDarkMode(1); document.cookie = "background: 1"}}>dark</button>
         </div>
       </div>
-      <div id="content" style={{color: darkMode ? "#000" : "#fff"}}> {/* else {return("#000")}})}>}
+      <div id="content" style={{backgroundColor: bgColor, color: textColor}}> {/* else {return("#000")}})}>*/}
         {/* <p id="main-text"> */}
           {getContent()}
         {/* </p> */}
         testing
-        
       </div>
-      <footer>
+      <footer style={{backgroundColor: accentColor}}>
         <div>
           <p>
             This Project is Open Sourced Under GNU GENERAL PUBLIC LICENSE <br></br>
