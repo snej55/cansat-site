@@ -9,7 +9,7 @@ import { Mission } from './Components/Mission';
 
 function App() {
 
-  const [darkMode, toogleDarkMode] = useState(false);
+  const [darkMode, toogleDarkMode] = useState(true);
 
   // var fontColor = {
   //   color: {darkMode ? "#fff" : "#000"}
@@ -35,7 +35,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div id="App">
       <div id="header">
         <img id="CastAway" src="images/logo128.png" alt="128*128 logo" draggable="false"></img>
         <h2>CastAway</h2>
@@ -59,7 +59,7 @@ function App() {
             <button onClick={() => toogleDarkMode(!darkMode)}>Change theme</button>
         </div>
       </div>
-      <div id="content" color={darkMode ? "#fff" : "#000"}>
+      <div id="content" style={{color: darkMode ? "#000" : "#fff"}}> {/* else {return("#000")}})}>}
         {/* <p id="main-text"> */}
           {getContent()}
         {/* </p> */}
