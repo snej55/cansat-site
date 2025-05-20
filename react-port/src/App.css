@@ -62,7 +62,14 @@ div#header > button#menu {
   cursor: pointer;
 }
 
-div#header > img#CastAway {
+div#header > div#logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+
+div#header > div#logo > img#CastAway {
   -webkit-user-drag: none;
   width: 30px;
   height: 30px;
@@ -71,7 +78,7 @@ div#header > img#CastAway {
   transition: 0.3s;
 }
 
-div#header > img#CastAway:hover {
+div#header > div#logo > img#CastAway:hover {
   animation: spin 0.1s infinite linear;
   animation-delay: 2s;
 }
@@ -85,7 +92,7 @@ div#header > img#CastAway:hover {
   }
 }
 
-div#header > h2 {
+div#header > div#logo > h2 {
   font-size: 20px;
   padding: 0 15px 0 8px;
 }
@@ -192,6 +199,10 @@ footer > div > div > a#github {
 
 footer > div > div > a#github:hover {
     color: var(--main-light-grey);
+}
+
+ul, ol {
+  padding-left: 20px;
 }
 
 h1, h2, h3, h4, h5, h6 {

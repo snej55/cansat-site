@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { Home } from './Components/Home';
 import { Docs } from './Components/Docs';
 import { Mission } from './Components/Mission';
+import { Credits } from './Components/Credits';
 
 import { darkModeInnit } from './cookies';
 
@@ -30,7 +31,7 @@ function App() {
   let accentColor = darkMode ? root.blue : root.darkGrey
   let bgColor = darkMode ? root.black : root.white
   let textColor = darkMode ? "#fff" : "#000"
-  
+
   document.documentElement.style.setProperty("--link-color", darkMode ? "var(--main-light-grey)" : "var(--main-orange)")
 
   const [page, setPage] = useState('home');
@@ -44,7 +45,7 @@ function App() {
       case "mission":
         return Mission();
       case "credits":
-        return "";
+        return Credits();
       default:
         // return home page as default
         return Home();
@@ -54,8 +55,10 @@ function App() {
   return (
     <div id="App" style={{backgroundColor: bgColor}}>
       <div id="header" style={{backgroundColor: accentColor}}>
-        <img id="CastAway" src="images/logo128.png" alt="128*128 logo" draggable="false"></img>
-        <h2>CastAway</h2>
+        <div id="logo" onClick={() => {setPage("home")}}>
+          <img id="CastAway" src="images/logo128.png" alt="128*128 logo" draggable="false"></img>
+          <h2>CastAway</h2>
+        </div>
 
         <div id="options">
           <button className="pageButton" onClick={() => {setPage("home")}}>Home</button>
@@ -75,16 +78,13 @@ function App() {
                 <button onClick={() => {toogleDarkMode(0); document.cookie = "background: 0"}} style={{backgroundColor: "#fff", border: darkMode ? "none" : "2px solid #555a"}}></button>
                 <button onClick={() => {toogleDarkMode(1); document.cookie = "background: 1"}} style={{backgroundColor: "#000", border: darkMode ? "2px solid #ddda" : "none"}}></button>
             </div>
-            <i id="PressOptions" onClick={() => {toogleMenu(0)}}>
+            <i id="PressOptions" onClick={() => {toogleMenu(0); setPage("credits")}}>
                 <a className="menu-item" id="credits">Credits</a>
             </i>
         </div>
       </div>
-      <div id="content" style={{backgroundColor: bgColor, color: textColor}}> {/* else {return("#000")}})}>*/}
-        {/* <p id="main-text"> */}
+      <div id="content" style={{backgroundColor: bgColor, color: textColor}}>
           {getContent()}
-        {/* </p> */}
-        testing - please remove me, don't leave me hard coded
       </div>
       <footer style={{backgroundColor: accentColor}}>
         <div>
