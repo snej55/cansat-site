@@ -95,6 +95,27 @@ div#header > div#options {
   display: flex;
 }
 
+#myDropdown {
+  padding: 15px 20px;
+  position: fixed;
+  top: 50px;
+  right: 5px;
+}
+
+#myDropdown > #theme{
+  display: flex;
+  align-items: center;
+  padding-bottom: 5px;
+}
+
+#myDropdown > #theme > button {
+  height: 18px;
+  width: 18px;
+  border-radius: 20px;
+  border: none;
+  margin-right: 5px;
+}
+
 .pageButton {
   padding: 0 15px;
   color: #fff;
@@ -156,8 +177,6 @@ footer > div > div > a#github {
 footer > div > div > a#github:hover {
     color: var(--main-light-grey);
 }
-
-footer 
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: 700;

@@ -61,17 +61,15 @@ function App() {
         </div>
 
         <button id="menu"><i className="demo-icon icon-menu">More</i></button>
-        <div id="myDropdown" className="dropdown-content">
+        <div id="myDropdown" className="dropdown-content" style={{color: textColor, backgroundColor: bgColor, border: "2px solid" + accentColor}}>
             <div id="theme">
                 Theme &nbsp; 
-                <a class="menu-item"></a>
-                <a class="menu-item"></a>
+                <button onClick={() => {toogleDarkMode(0); document.cookie = "background: 0"}} style={{backgroundColor: "#fff", border: darkMode ? "none" : "2px solid #555a"}}></button>
+                <button onClick={() => {toogleDarkMode(1); document.cookie = "background: 1"}} style={{backgroundColor: "#000", border: darkMode ? "2px solid #ddda" : "none"}}></button>
             </div>
             <div id="PressOptions">
                 <a className="menu-item" id="credits" onclick="credits()">Credits</a>
             </div>
-            <button onClick={() => {toogleDarkMode(0); document.cookie = "background: 0"}}>white</button>
-            <button onClick={() => {toogleDarkMode(1); document.cookie = "background: 1"}}>dark</button>
         </div>
       </div>
       <div id="content" style={{backgroundColor: bgColor, color: textColor}}> {/* else {return("#000")}})}>*/}
