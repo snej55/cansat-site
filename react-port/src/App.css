@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --main-red: #b13e53;
   --main-orange: #ef7d57;
   --main-yellow: #ffcd75;
@@ -18,7 +18,7 @@
   font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
   margin: 0;
   padding: 0;
-}
+} */
 
 div#App, div#root {
   display: flex;
@@ -96,6 +96,7 @@ div#header > div#options {
 }
 
 #myDropdown {
+  display: none;
   padding: 15px 20px;
   position: fixed;
   top: 50px;
@@ -133,10 +134,25 @@ div#header > div#options {
   border-bottom: 1px #aaa9 solid;
 }
 
+#PressOptions {
+  padding: 3px 15px 3px 2px;
+  margin: 2px 0;
+  width: inherit;
+  cursor: pointer;
+  transition: 0.15s ease-out;
+  border-left: 0px #0000 solid;
+  background-color: #8880;
+}
+
+#PressOptions:hover {
+  border-left: 5px #6b6b6b55 solid;
+  background-color: #cecece22;
+}
+
 div#content {
   font-size: 17px;
   margin-top: 30px;
-  width: 1400px; /* TODO: Fix this */
+  width: 1400px; /* TODO: Fix this - but why? */
   max-width: 80vw;
   min-height: 100vh;
   align-self: center;

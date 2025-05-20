@@ -11,6 +11,7 @@ import { darkModeInnit } from './cookies';
 function App() {
 
   const [darkMode, toogleDarkMode] = useState(darkModeInnit);
+  const [menuOpen, toogleMenu] = useState(false);
 
   let root = {
     red: "#b13e53",
@@ -60,23 +61,28 @@ function App() {
           <button className="pageButton" onClick={() => {setPage("mission")}}>Mission</button>
         </div>
 
-        <button id="menu"><i className="demo-icon icon-menu">More</i></button>
-        <div id="myDropdown" className="dropdown-content" style={{color: textColor, backgroundColor: bgColor, border: "2px solid" + accentColor}}>
+        <button id="menu" onClick={() => {toogleMenu(!menuOpen)}}><i className="demo-icon icon-menu"></i></button>
+        <div id="myDropdown" className="dropdown-content" style={{
+          display: menuOpen ? "unset" : "none",
+          color: textColor,
+          backgroundColor: bgColor,
+          border: "2px solid" + accentColor}}>
+
             <div id="theme">
                 Theme &nbsp; 
                 <button onClick={() => {toogleDarkMode(0); document.cookie = "background: 0"}} style={{backgroundColor: "#fff", border: darkMode ? "none" : "2px solid #555a"}}></button>
                 <button onClick={() => {toogleDarkMode(1); document.cookie = "background: 1"}} style={{backgroundColor: "#000", border: darkMode ? "2px solid #ddda" : "none"}}></button>
             </div>
-            <div id="PressOptions">
-                <a className="menu-item" id="credits" onclick="credits()">Credits</a>
-            </div>
+            <i id="PressOptions" onClick={() => {toogleMenu(0)}}>
+                <a className="menu-item" id="credits">Credits</a>
+            </i>
         </div>
       </div>
       <div id="content" style={{backgroundColor: bgColor, color: textColor}}> {/* else {return("#000")}})}>*/}
         {/* <p id="main-text"> */}
           {getContent()}
         {/* </p> */}
-        testing
+        testing - please remove me, don't leave me hard coded
       </div>
       <footer style={{backgroundColor: accentColor}}>
         <div>
