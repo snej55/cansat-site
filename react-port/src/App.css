@@ -20,6 +20,10 @@
   padding: 0;
 } */
 
+:root {
+  overscroll-behavior: none;
+}
+
 div#App, div#root {
   display: flex;
   justify-content: center;
