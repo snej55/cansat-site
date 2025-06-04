@@ -23,7 +23,8 @@ export function Mission() {
             </ul>
             <br />
             We need to have a near-constant steam of data sent to us over radio, and be able to recover 
-            the satelite in a state where we can recover more data, and use it again. <br />
+            the satelite in a state where we can recover more data, as well as being able to redeploy
+            the website. <br />
             <br />
             Another one of our objectives is to raise public awareness about our project, which we 
             are trying to achieve by: <br /><br />
