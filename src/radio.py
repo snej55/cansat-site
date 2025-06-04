@@ -1,7 +1,8 @@
 import time
+import machine
 
-pin16 
-pin17
+pin16 = r.gpio16
+pin17 = r.gpio16
 
 def transmit(data):
     pin17 = data
