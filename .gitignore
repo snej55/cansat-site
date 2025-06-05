@@ -1,2 +1,4 @@
 /react-port/node_modules/
 /.idea/
+/.vscode/
+*.kdev4
