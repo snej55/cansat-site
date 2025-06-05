@@ -83,7 +83,7 @@ div#header > div#logo > img#CastAway {
 }
 
 div#header > div#logo > img#CastAway:hover {
-  animation: spin 0.1s infinite linear;
+  animation: spin 1.2s infinite linear;
   animation-delay: 2s;
 }
 
