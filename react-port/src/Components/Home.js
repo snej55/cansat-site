@@ -2,7 +2,7 @@ import './Home.css';
 export function Home() {
     return (
         <div className="page-content">
-            <h1>Ode to Danny Go</h1><br/>
+            <h1>The Ballad of Danny Go</h1><br/>
             In the heart of towns and cities wide,<br/>
             There walks a man with love as guide.<br/>
             Danny Go, with spirit bold,<br/>
