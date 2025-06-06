@@ -1053,6 +1053,112 @@ export function Home() {
             Stands Richard, humble, weaving life's serene dreams.<br/>
             A biology teacher, with spirit so kind and pure,<br/>
             He opens young minds, making knowledge secure.<br/>
+            <br/>
+
+            <h1>Jan's poem</h1>
+            <br/>
+            In the flickerin' glow of classroom lights so dim,<br/>
+            Where dusty old textbooks gathered grim,<br/>
+            Stood Mr. Nirmal, ruler in hand,<br/>
+            A proper stern bloke, commandin' the land.<br/>
+            His glasses perched on his nose just right,<br/>
+            His tweed jacket buttoned up tight.<br/>
+            The blackboard behind him was covered in sums,<br/>
+            While the classroom sat quiet as drums.<br/>
+            <br/>
+            But there in the back, with a face so divine,<br/>
+            Sat Jan Lukasiak, handsome and fine.<br/>
+            His chiseled cheekbones caught the light,<br/>
+            His piercing brown like beer eyes shone so bright.<br/>
+            His dark wavy hair fell just so,<br/>
+            A lock dangling down on his brow.<br/>
+            His strong jawline clenched as he chewed,<br/>
+            On his pen's plastic cap, looking bored and subdued.<br/>
+            <br/>
+            His maths book lay open, a canvas so bare,<br/>
+            Awaitin' his touch, his artistic flair.<br/>
+            The pages were crisp, the problems aligned,<br/>
+            But Jan had much different plans in mind.<br/>
+            With a flick of his pen and a stroke so bold,<br/>
+            He transformed the pages, a story untold.<br/>
+            His fingers moved quick with an artist's grace,<br/>
+            A smirk played on his handsome face.<br/>
+            <br/>
+            The Pythagorean theorem, once proper and neat,<br/>
+            Now sported a tache, lookin' dead cheeky and sweet.<br/>
+            Old Pythagoras himself had a top hat in place,<br/>
+            And a monocle drawn with such delicate trace.<br/>
+            But oh, what a sight, with his face so fair,<br/>
+            The girls in the class could only stare.<br/>
+            Their eyes followed Jan, watching him work,<br/>
+            As his pen danced and twirled with a mischievous quirk.<br/>
+            <br/>
+            Nirmal droned on, none the wiser, bless 'im,<br/>
+            "Now class, pay attention, this next bit's quite grim."<br/>
+            As Jan's pen danced, takin' the absolute mick,<br/>
+            Turning old Euler into a right proper dick.<br/>
+            The quadratic equations, once tidy and right,<br/>
+            Now twisted and tangled, a proper sight.<br/>
+            The parabolas sprouted little legs and feet,<br/>
+            Dancing a jig to a sly rhythmic beat.<br/>
+            <br/>
+            His handsome face lit with a mischievous grin,<br/>
+            As he doodled and drew, causin' a din.<br/>
+            The sine and cosine, once waves so pure,<br/>
+            Now danced with the devil, havin' a right laugh, for sure.<br/>
+            The sine wave had arms and was wavin' hello,<br/>
+            While cosine wore sunglasses, looking dead cool, yo.<br/>
+            The graphs all came alive under Jan's clever hand,<br/>
+            Living out adventures in this mathematical land.<br/>
+            <br/>
+            The classroom clock ticked, a slow, steady beat,<br/>
+            Its hands moving round, never missing a beat.<br/>
+            As Jan's masterpiece neared its deceit,<br/>
+            His artwork so clever, so wicked, so neat.<br/>
+            His face, so angelic, hid his cunning mind,<br/>
+            A wolf in sheep's clothin', one of a kind.<br/>
+            No one would suspect that this handsome young bloke,<br/>
+            Had turned all their maths into one big joke.<br/>
+            <br/>
+            Nirmal turned, his gaze sweepin' the room,<br/>
+            "Now then, who's ready to meet their doom?"<br/>
+            But Jan's book lay shut, hidin' its bloom,<br/>
+            His mischief concealed in that textbook tomb.<br/>
+            With a face so innocent, a gleam in his eye,<br/>
+            He looked like a saint, but oh what a lie.<br/>
+            His long lashes fluttered, his lips pressed tight,<br/>
+            Hiding all traces of his artistic delight.<br/>
+            <br/>
+            The bell finally rang, what a beautiful sound,<br/>
+            As the students all filed out, homeward bound.<br/>
+            They handed their books in, stacked with care,<br/>
+            His handiwork hidden, a secret affair.<br/>
+            But Nirmal would find, with a gasp and a stare,<br/>
+            The chaos and genius that Jan left there.<br/>
+            The teacher would clutch at his poor aching chest,<br/>
+            At the sight of those equations, put to the test.<br/>
+            <br/>
+            The next day at school there was quite a scene,<br/>
+            As students gathered to see what he'd mean.<br/>
+            The book was displayed for the whole class to see,<br/>
+            This mathematical madness, this anarchy.<br/>
+            The girls all sighed at the work of his hand,<br/>
+            This handsome young vandal, this mathematical man.<br/>
+            While the lads all laughed at the drawings so bold,<br/>
+            At the way that he twisted those theorems of old.<br/>
+            <br/>
+            So here's to Jan, with his face so fair,<br/>
+            A maths book vandal, drivin' 'im spare.<br/>
+            His legend now lives in the school's hallowed halls,<br/>
+            The boy who turned maths into art on its walls.<br/>
+            In the classroom of numbers, his legend will grow,<br/>
+            A tale to be told of that cheeky young crow.<br/>
+            A handsome genius, with a touch so bold and sly,<br/>
+            A rebel, an artist, oh my, oh my.<br/>
+            Innit just brilliant? What a guy, oh blimey!<br/>
+            A proper laugh, mate, what a legend, what an eyeful!<br/>
+            That Jan Lukasiak, he's one right proper lad,<br/>
+            The best looking troublemaker that school ever had.<br/>
 
         </div >
 
