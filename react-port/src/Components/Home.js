@@ -950,7 +950,109 @@ export function Home() {
             And so, with each step, his vision shone bright, <br />
             A shimmering beacon in the climate fight.< br />
 
+
+            <br/>
             ⸻
+
+                        In the quiet classroom, where soft light gently gleams,<br/>
+            Stands Richard, humble, lost in life's serene dreams.<br/>
+            A biology teacher, with a spirit so kind and pure,<br/>
+            He nurtures young minds, making knowledge secure.<br/>
+            <br/>
+            "Come, gather 'round," he beckons with grace and care,<br/>
+            "Let's explore the wonders of life that we share."<br/>
+            With a voice so calm, and a manner so meek,<br/>
+            He guides his students through mysteries they seek.<br/>
+            <br/>
+            From the tiniest cell to the vast, sprawling tree,<br/>
+            He reveals the magic of life's sweet harmony.<br/>
+            "See how it grows," he whispers with tender touch,<br/>
+            "In every leaf, in the air, it means so much."<br/>
+            <br/>
+            His laboratory, a sanctuary where thoughts take flight,<br/>
+            With microscopes revealing what's hidden from sight.<br/>
+            "Look closely now," he encourages with a smile so bright,<br/>
+            "At the intricate patterns that make life take flight."<br/>
+            <br/>
+            Through changing seasons, he stands by their side,<br/>
+            A steady, guiding force, their constant, trusted guide.<br/>
+            In spring, they explore the blooming flowers' sway,<br/>
+            In summer, the buzzing of insects at play.<br/>
+            <br/>
+            When autumn arrives with its leaves falling down,<br/>
+            He teaches the cycle of life that abounds.<br/>
+            And in cold winter, when the world seems so still,<br/>
+            He shows them life's resilience, iron-strong will.<br/>
+            <br/>
+            Beyond classroom walls, where nature's beauty shines,<br/>
+            With nets and notebooks, they study its designs.<br/>
+            He speaks of ecosystems, both delicate and grand,<br/>
+            Of food chains and webs, so intricately planned.<br/>
+            <br/>
+            In the school's small garden, he kneels by their side,<br/>
+            Demonstrating how to plant seeds with love and pride.<br/>
+            "Nurture them gently," he says with a patient smile,<br/>
+            "Watch them grow strong—it's worth every while."<br/>
+            <br/>
+            He tells tales of scientists, their struggles and triumphs too,<br/>
+            Of Darwin's long voyage on the Beagle so blue.<br/>
+            Of Fleming's discovery that changed our world's fate,<br/>
+            These stories of science he shares with great weight.<br/>
+            <br/>
+            When students struggle, feeling lost or alone,<br/>
+            Richard is there with a heart fully shown.<br/>
+            He listens, understands, offers his hand to hold,<br/>
+            Guiding them through life's mysteries to unfold.<br/>
+            <br/>
+            His classroom walls display projects fine and neat,<br/>
+            Each one a testament to young minds replete.<br/>
+            From cell models to life's tree so wide,<br/>
+            Each one crafted with care, love, and pride.<br/>
+            <br/>
+            When the final bell rings and students depart,<br/>
+            He stays in his classroom, content in his heart.<br/>
+            For Richard, the humble, the wise, and the true,<br/>
+            Finds joy in life's wonders, both old and new.<br/>
+            <br/>
+            He marks their work carefully, offering praise where it's due,<br/>
+            His comments thoughtful, encouraging them to pursue.<br/>
+            Always challenging them to see things anew,<br/>
+            To question, explore, and follow truths through.<br/>
+            <br/>
+            In the staff room, he's known for his quiet, kind way,<br/>
+            Always ready to listen, to brighten someone's day.<br/>
+            Colleagues respect him, value his insight,<br/>
+            His wisdom and humor make burdens feel light.<br/>
+            <br/>
+            At home in his study, his passion still burns,<br/>
+            Surrounded by books where much knowledge he learns.<br/>
+            He reads and researches, always seeking more,<br/>
+            To inspire his students as never before.<br/>
+            <br/>
+            Through years, his lessons will forever remain,<br/>
+            In his students' hearts like a soft, gentle rain.<br/>
+            For Richard, the humble biology teacher so dear,<br/>
+            Has shown them life's beauty, year after year.<br/>
+            <br/>
+            For every mind shaped, for every heart inspired,<br/>
+            For every path paved, every dream acquired,<br/>
+            He remains ever humble, ever grateful, ever true,<br/>
+            To the calling that guides him in all that he'll do.<br/>
+            <br/>
+            As years pass and his hair turns to gray,<br/>
+            His passion for teaching never fades away.<br/>
+            For in every student, he sees potential bright,<br/>
+            A spark of curiosity, a thirst for insight.<br/>
+            <br/>
+            So here's to Richard, the humble biology teacher,<br/>
+            Whose lessons extend far beyond any feature.<br/>
+            In his students' hearts, his memory will stay,<br/>
+            A guiding light, come what may.<br/>
+            <br/>
+            In the quiet classroom, where soft light gently gleams,<br/>
+            Stands Richard, humble, weaving life's serene dreams.<br/>
+            A biology teacher, with spirit so kind and pure,<br/>
+            He opens young minds, making knowledge secure.<br/>
 
         </div >
 
