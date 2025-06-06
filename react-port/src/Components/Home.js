@@ -3,7 +3,8 @@ import './Home.css';
 export function Home() {
     return (
         <div className="page-content">
-            <h1>The Ballad of Danny Go</h1><br />
+            <h1>Some AI poetry to fill the blanks:</h1><br/>
+            <h2>The Ballad of Danny Go</h2><br />
             In the heart of towns and cities wide,<br />
             There walks a man with love as guide.<br />
             Danny Go, with spirit bold,<br />
@@ -928,7 +929,7 @@ export function Home() {
             With love and hope that in thy heart we see.<br />
             <br></br>
 
-            <h1><b>Andrew’s Reflective Revolution</b></h1>
+            <h2><b>Andrew’s Reflective Revolution</b></h2>
             <br />
             Andrew the geographer, clever and wise, <br />
             Observed the heat rising, scorching the skies.< br />
@@ -952,9 +953,10 @@ export function Home() {
 
 
             <br/>
-            ⸻
+            <h2>Ode to Richard</h2>
+            <br/>
 
-                        In the quiet classroom, where soft light gently gleams,<br/>
+            In the quiet classroom, where soft light gently gleams,<br/>
             Stands Richard, humble, lost in life's serene dreams.<br/>
             A biology teacher, with a spirit so kind and pure,<br/>
             He nurtures young minds, making knowledge secure.<br/>
@@ -1055,7 +1057,7 @@ export function Home() {
             He opens young minds, making knowledge secure.<br/>
             <br/>
 
-            <h1>Jan's poem</h1>
+            <h2>Jan's saga</h2>
             <br/>
             In the flickerin' glow of classroom lights so dim,<br/>
             Where dusty old textbooks gathered grim,<br/>
