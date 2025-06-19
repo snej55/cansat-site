@@ -37,7 +37,7 @@ export function Mission() {
             <br />
             The CastAway satelite will be launched by a small rocket to an altitude of 1000 ft (300 m), 
             from which point it will start collecting data. It will deploy a parachute at its highest 
-            altitude, in order to slow its rate of descent to between 10 and 15 m/s (22 and 34 mph).
+            altitude, in order to slow its rate of descent to between 10 and 15 m/s (22 and 34 mph).<br />
 
             <h2>Our tree policy.</h2><br />
 
