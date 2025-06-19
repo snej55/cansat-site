@@ -1,4 +1,7 @@
 #allign {
+    body {
+    background-color: lightblue;
+    }
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
