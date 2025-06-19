@@ -37,7 +37,17 @@ export function Mission() {
             <br />
             The CastAway satelite will be launched by a small rocket to an altitude of 1000 ft (300 m), 
             from which point it will start collecting data. It will deploy a parachute at its highest 
-            altitude, in order to slow its rate of descent to between 10 and 15 m/s (22 and 34 mph). 
+            altitude, in order to slow its rate of descent to between 10 and 15 m/s (22 and 34 mph).
+
+            <h2>Our tree policy.</h2><br />
+
+            If our satelite falls into a tree, the tree with not be happy that it is being abused, and as 
+            revenge the tree will steal out satelite. However, it is our policy not to negotiate with 
+            terrorists like these trees. I will hire a tree hitman (Henry Bathmaker) to put on a lumberjack 
+            shirt and chop the tree down with an axe. He will probably fail, and get arrested for tree 
+            damage and tresspassing, but the police will then call the fire brigade who will recover the 
+            satelite from the leaves using a ladder. Do not worry. We will get the satelite back. Mark my words.
+
         </div>
     )
 }
