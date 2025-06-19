@@ -1,51 +1,79 @@
-""" CANSAT PICO RECEIVER node
+# SPDX-FileCopyrightText: 2018 Brent Rubell for Adafruit Industries
+#
+# SPDX-License-Identifier: MIT
 
-Receives message requiring ACK over RFM69HCW SPI module - RECEIVER node
-Must be tested togheter with test_emitter
-
-See Tutorial : https://wiki.mchobby.be/index.php?title=ENG-CANSAT-PICO-RFM69HCW-TEST
-See GitHub : https://github.com/mchobby/cansat-belgium-micropython/tree/main/test-rfm69
-
-RFM69HCW breakout : https://shop.mchobby.be/product.php?id_product=1390
-RFM69HCW breakout : https://www.adafruit.com/product/3071
 """
+Example for using the RFM69HCW Radio with Raspberry Pi.
 
-from machine import SPI, Pin
-from rfm69 import RFM69
+Learn Guide: https://learn.adafruit.com/lora-and-lorawan-for-raspberry-pi
+Author: Brent Rubell for Adafruit Industries
+"""
+# Import Python System Libraries
 import time
+# Import Blinka Libraries
+import busio
+from digitalio import DigitalInOut, Direction, Pull
+import board
+# Import the SSD1306 module.
+# import adafruit_ssd1306
+# Import the RFM69 radio module.
+import adafruit_rfm69
 
-FREQ           = 433.1
-ENCRYPTION_KEY = b"\x01\x02\x03\x04\x05\x06\x07\x08\x01\x02\x03\x04\x05\x06\x07\x08"
-NODE_ID        = 100 # ID of this node
+# Button A
+#btnA = DigitalInOut(board.D5)
+#btnA.direction = Direction.INPUT
+#btnA.pull = Pull.UP
 
-spi = SPI(0, polarity=0, phase=0, firstbit=SPI.MSB) # baudrate=50000,
-nss = Pin( 5, Pin.OUT, value=True )
-rst = Pin( 3, Pin.OUT, value=False )
+# Button B
+#btnB = DigitalInOut(board.D6)
+#btnB.direction = Direction.INPUT
+#btnB.pull = Pull.UP
 
-rfm = RFM69( spi=spi, nss=nss, reset=rst )
-rfm.frequency_mhz = FREQ
+# Button C
+#btnC = DigitalInOut(board.D12)
+#btnC.direction = Direction.INPUT
+#btnC.pull = Pull.UP
 
+# Create the I2C interface.
+#i2c = busio.I2C(board.SCL, board.SDA)
+
+# 128x32 OLED Display
+#reset_pin = DigitalInOut(board.D4)
+#display = adafruit_ssd1306.SSD1306_I2C(128, 32, i2c, reset=reset_pin)
+## Clear the display.
+#display.fill(0)
+#display.show()
+#width = display.width
+#height = display.height
+#
+# Configure Packet Radio
+CS = DigitalInOut(board.CE1)
+RESET = DigitalInOut(board.D25)
+spi = busio.SPI(10, MOSI=11, MISO=6)
+rfm69 = adafruit_rfm69.RFM69(spi, CS, RESET, 915.0)
+prev_packet = None
 # Optionally set an encryption key (16 byte AES key). MUST match both
 # on the transmitter and receiver (or be set to None to disable/the default).
-rfm.encryption_key = ( ENCRYPTION_KEY )
-rfm.node = NODE_ID # This instance is the node 123
+rfm69.encryption_key = b'\x01\x02\x03\x04\x05\x06\x07\x08\x01\x02\x03\x04\x05\x06\x07\x08'
 
-print( 'Freq            :', rfm.frequency_mhz )
-print( 'NODE            :', rfm.node )
-
-print("Waiting for packets...")
 while True:
-	packet = rfm.receive( with_ack=False )
-	# Optionally change the receive timeout from its default of 0.5 seconds:
-	# packet = rfm.receive(timeout=5.0)
-	# If no packet was received during the timeout then None is returned.
-	if packet is None:
-		# Packet has not been received
-		pass
-	else:
-		# Received a packet!
-		print( "Received (raw bytes):", packet )
-		# And decode to ASCII text
-		packet_text = str(packet, "ascii")
-		print("Received (ASCII):", packet_text)
-		print("-"*40)
+    packet = None
+    # draw a box to clear the image
+    display.fill(0)
+    display.text('RasPi Radio', 35, 0, 1)
+
+    # check for packet rx
+    packet = rfm69.receive()
+    if packet is None:
+        print('- Waiting for PKT -')
+    else:
+        # Display the packet text and rssi
+        display.fill(0)
+        prev_packet = packet
+        packet_text = str(prev_packet, "utf-8")
+        print('RX: ', packet_text)
+        time.sleep(1)
+    
+    rfm69.send(100)
+    time.sleep(1)
+    time.sleep(0.1)
