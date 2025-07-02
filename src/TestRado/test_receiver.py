@@ -1,2 +1,49 @@
+import board
+import busio
+import digitalio
 import adafruit_rfm69
-rfm69 = adafruit_rfm69.RFM69(
+
+# Create the SPI bus
+spi = busio.SPI(board.GP6, board.GP7, board.GP4)  # SCK, MOSI, MISO
+
+# Chip select and reset pins
+cs = digitalio.DigitalInOut(board.GP5)
+reset = digitalio.DigitalInOut(board.GP13)
+
+# Initialize the radio
+rfm69 = adafruit_rfm69.RFM69(spi, cs, reset, 434.0, baudrate=2000000)
+
+rfm = rfm69
+
+print("Waiting for packets...")
+
+while True:
+    packet = rfm.receive()
+    # Optionally change the receive timeout from its default of 0.5 seconds:
+    # packet = rfm9x.receive(timeout=5.0)
+    # If no packet was received during the timeout then None is returned.
+    if packet is None:
+        # Packet has not been received
+        print("Received nothing! Listening again...")
+    else:
+        # Received a packet!
+        # Print out the raw bytes of the packet:
+        print(f"Received (raw bytes): {packet}")
+        # And decode to ASCII text and print it too.  Note that you always
+        # receive raw bytes and need to convert to a text format like ASCII
+        # if you intend to do string processing on your data.  Make sure the
+        # sending side is sending ASCII data before you try to decode!
+        num = 0
+        try:
+            packet_text = str(packet, "ascii")
+            num = int(packet_text)
+            print(f"Received (ASCII): {packet_text}")
+        except UnicodeError:
+            print("Hex data: ", [hex(x) for x in packet])
+        # Also read the RSSI (signal strength) of the last received message and
+        # print it.
+        rssi = rfm.last_rssi
+        print(f"Received signal strength: {rssi} dB")
+        text = str(num + 1) + "\r\n"
+        rfm.send(bytes(text, "utf-8"))
+        print("Sent pong message!")
