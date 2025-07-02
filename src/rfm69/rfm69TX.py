@@ -2,6 +2,14 @@ import board
 import busio
 import digitalio
 import adafruit_rfm69
+import time
+import adafruit_bmp280
+
+sda = board.GP0
+scl = board.GP1
+i2c = busio.I2C(scl=scl, sda=sda)
+bmp280 = adafruit_bmp280.Adafruit_BMP280_I2C(i2c)
+bmp280.sea_level_pressure = bmp280.pressure # relative pressure
 
 # Create the SPI bus
 spi = busio.SPI(board.GP6, board.GP7, board.GP4)  # SCK, MOSI, MISO
@@ -17,4 +25,5 @@ rfm.encryption_key = encryption_key
 rfm.tx_power = 13
 
 while True:
-    rfm.send(bytes("Hello world!\r\n", "utf-8"))
+    rfm.send(bytes(f"Temp: {bmp280.temperature :.2f} C, Pressure: {bmp280.pressure :.2f} hPa, Altitude: {bmp280.altitude :.2f}", "utf-8"))
+    time.sleep(0.5)
