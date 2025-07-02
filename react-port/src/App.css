@@ -1,15 +1,18 @@
 * {
-  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   /* fixes overflow issues */
   margin: 0;
   padding: 0;
 }
 
-:root, body, * {
+:root,
+body,
+* {
   overscroll-behavior: none;
 }
 
-div#App, div#root {
+div#App,
+div#root {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -42,7 +45,7 @@ div#header {
   user-select: none;
 }
 
-div#header > button#menu {
+div#header>button#menu {
   margin-right: 20px;
   margin-left: auto;
   font-size: 18px;
@@ -52,14 +55,14 @@ div#header > button#menu {
   cursor: pointer;
 }
 
-div#header > div#logo {
+div#header>div#logo {
   display: flex;
   flex-direction: row;
   align-items: center;
   cursor: pointer;
 }
 
-div#header > div#logo > img#CastAway {
+div#header>div#logo>img#CastAway {
   -webkit-user-drag: none;
   width: 30px;
   height: 30px;
@@ -68,8 +71,9 @@ div#header > div#logo > img#CastAway {
   transition: 0.3s;
 }
 
-div#header > div#logo > img#CastAway:hover {
-  animation: spin 1.2s infinite linear;
+div#header>div#logo>img#CastAway:hover {
+  animation: spin 0.2s infinite linear;
+
   animation-delay: 2s;
 }
 
@@ -77,17 +81,18 @@ div#header > div#logo > img#CastAway:hover {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
 
-div#header > div#logo > h2 {
+div#header>div#logo>h2 {
   font-size: 20px;
   padding: 0 15px 0 8px;
 }
 
-div#header > div#options {
+div#header>div#options {
   padding-left: 20px;
   display: flex;
 }
@@ -100,13 +105,13 @@ div#header > div#options {
   right: 5px;
 }
 
-#myDropdown > #theme{
+#myDropdown>#theme {
   display: flex;
   align-items: center;
   padding-bottom: 5px;
 }
 
-#myDropdown > #theme > button {
+#myDropdown>#theme>button {
   height: 18px;
   width: 18px;
   border-radius: 20px;
@@ -149,7 +154,8 @@ div#header > div#options {
 div#content {
   font-size: 17px;
   margin-top: 30px;
-  width: 1400px; /* TODO: Fix this - but why? */
+  width: 1400px;
+  /* TODO: Fix this - but why? */
   max-width: 80vw;
   min-height: 100vh;
   align-self: center;
@@ -170,7 +176,7 @@ footer {
   margin-top: 30px;
 }
 
-footer > div > div#icons {
+footer>div>div#icons {
   -moz-user-select: -moz-none;
   -khtml-user-select: none;
   -webkit-user-select: none;
@@ -182,44 +188,50 @@ footer > div > div#icons {
   font-size: 20px;
 }
 
-footer > div > div > a#github {
+footer>div>div>a#github {
   color: var(--main-white);
   transition: 0.2s ease-in-out;
   cursor: pointer;
 }
 
-footer > div > div > a#github:hover {
-    color: var(--main-light-grey);
+footer>div>div>a#github:hover {
+  color: var(--main-light-grey);
 }
 
-ul, ol {
+ul,
+ol {
   padding-left: 20px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
 }
 
 h1 {
-    font-size: 160%;
+  font-size: 160%;
 }
 
 h2 {
-    font-size: 130%;
+  font-size: 130%;
 }
 
 h3 {
-    font-size: 100%;
+  font-size: 100%;
 }
 
 h4 {
-    font-size: 80%;
+  font-size: 80%;
 }
 
 h5 {
-    font-size: 60%;
+  font-size: 60%;
 }
 
 h6 {
-    font-size: 45%;
+  font-size: 45%;
 }
