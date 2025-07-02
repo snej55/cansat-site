@@ -14,7 +14,8 @@ reset = digitalio.DigitalInOut(board.GP13)
 rfm69 = adafruit_rfm69.RFM69(spi, cs, reset, 434.0, baudrate=1000000)
 
 rfm = rfm69
-
+rfm.send(bytes("Hello world!\r\n", "utf-8"))
+print("Sent Hello World message!")
 print("Waiting for packets...")
 
 while True:
