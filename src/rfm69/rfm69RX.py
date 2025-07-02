@@ -2,7 +2,7 @@ import board
 import busio
 import digitalio
 import adafruit_rfm69
-
+import time
 # Create the SPI bus
 spi = busio.SPI(board.GP6, board.GP7, board.GP4)  # SCK, MOSI, MISO
 
@@ -15,6 +15,7 @@ rfm = adafruit_rfm69.RFM69(spi, cs, reset, 434.0, baudrate=2000000)
 encryption_key = "VB6CYeaOtduNZcgu"
 rfm.encryption_key = encryption_key
 
+print("CanSat Ground Station Init")
 
 while True:
 
@@ -38,7 +39,7 @@ while True:
         # sending side is sending ASCII data before you try to decode!
         try:
             packet_text = str(packet, "ascii")
-
+            print(time.time())
             print(f"Received (ASCII): {packet_text}")
         except UnicodeError:
             print("Hex data: ", [hex(x) for x in packet])
