@@ -13,6 +13,6 @@ def create_rfm69() -> adafruit_rfm69.RFM69:
     # Initialize the radio
     rfm = adafruit_rfm69.RFM69(spi, cs, reset, 434.0, baudrate=2000000)
     encryption_key = "VB6CYeaOtduNZcgu"
-    rfm.encryption_key = encryption_key
+    #rfm.encryption_key = encryption_key
     rfm.tx_power = 13
     return rfm
