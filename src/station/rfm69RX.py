@@ -26,9 +26,9 @@ while True:
     # packet = rfm9x.receive(timeout=5.0)
     # If no packet was received during the timeout then None is returned.
     if packet is None:
-        pass
+        #pass
         # Packet has not been received
-        #print("Received nothing! Listening again...")
+        print("Received nothing! Listening again...")
     else:
         # Received a packet!
         # Print out the raw bytes of the packet:

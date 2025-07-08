@@ -1,12 +1,12 @@
 import time, board, json
 
-from bmp280 import create_bmp280
+#from bmp280 import create_bmp280
 from rfm69 import create_rfm69
-from lis3dh import *
+#from lis3dh import *
 
-bmp280 = create_bmp280()
+#bmp280 = create_bmp280()
 rfm = create_rfm69()
-lis3dh = create_lis3dh(board.GP3, board.GP2)
+#lis3dh = create_lis3dh(board.GP3, board.GP2)
 
 def gen_data(bmp280, lis3dh) -> str:
     data = {
@@ -21,7 +21,7 @@ def gen_data(bmp280, lis3dh) -> str:
     }
     return json.dumps(data)
 
-rfm.reset()
+#rfm.reset()
 while True:
     packet = rfm.receive()
     if packet is None:
@@ -40,4 +40,4 @@ while True:
         rssi = rfm.last_rssi
         print(f"Received signal strength: {rssi} dB")
         
-        rfm.send(bytes(gen_data(bmp280, lis3dh), "utf-8"))
+        rfm.send(bytes("hey there handsome", "utf-8"))
