@@ -20,19 +20,23 @@ rfm.tx_power = 13
 
 print("Ground Station Init")
 
-while True:
+#while True:
+message = "STATION_RADIO_ALIVE"
+rfm.send(bytes(message, "utf-8"))
+
+
+while True: #Busy wait for cansat to respond
+    packet = rfm.receive()
     if packet is None:
         print("Received nothing! Listening again...")
+        
+        break
 
-packet_text = str(packet, "ascii")
-
-if packet_text == "STATION_RADIO_ALIVE":
-    print("Handshake suceeded !")
-    message = "CANSAT_RADIO_ALIVE"
-    rfm.send(bytes(message, "utf-8"))
-    packet = rfm.receive()
+def process_handshake(packet):
+    packet_text = str(packet, "ascii")
+    if packet_text == "CANSAT_RADIO_ALIVE":
+        print("Handshake suceeded !")
 
 
-        rssi = rfm.last_rssi
-        print(f"Received signal strength: {rssi} dB")
-
+    rssi = rfm.last_rssi
+    print(f"Received signal strength: {rssi} dB")
