@@ -3,7 +3,8 @@ import './Home.css';
 export function Home() {
     return (
         <div className="page-content">
-            <h1>The Ballad of Danny Go</h1><br />
+            <h1>Some AI poetry to fill the blanks:</h1><br/>
+            <h2>The Ballad of Danny Go</h2><br />
             In the heart of towns and cities wide,<br />
             There walks a man with love as guide.<br />
             Danny Go, with spirit bold,<br />
@@ -928,7 +929,7 @@ export function Home() {
             With love and hope that in thy heart we see.<br />
             <br></br>
 
-            <h1><b>Andrew’s Reflective Revolution</b></h1>
+            <h2><b>Andrew’s Reflective Revolution</b></h2>
             <br />
             Andrew the geographer, clever and wise, <br />
             Observed the heat rising, scorching the skies.< br />
@@ -950,7 +951,216 @@ export function Home() {
             And so, with each step, his vision shone bright, <br />
             A shimmering beacon in the climate fight.< br />
 
-            ⸻
+
+            <br/>
+            <h2>Ode to Richard</h2>
+            <br/>
+
+            In the quiet classroom, where soft light gently gleams,<br/>
+            Stands Richard, humble, lost in life's serene dreams.<br/>
+            A biology teacher, with a spirit so kind and pure,<br/>
+            He nurtures young minds, making knowledge secure.<br/>
+            <br/>
+            "Come, gather 'round," he beckons with grace and care,<br/>
+            "Let's explore the wonders of life that we share."<br/>
+            With a voice so calm, and a manner so meek,<br/>
+            He guides his students through mysteries they seek.<br/>
+            <br/>
+            From the tiniest cell to the vast, sprawling tree,<br/>
+            He reveals the magic of life's sweet harmony.<br/>
+            "See how it grows," he whispers with tender touch,<br/>
+            "In every leaf, in the air, it means so much."<br/>
+            <br/>
+            His laboratory, a sanctuary where thoughts take flight,<br/>
+            With microscopes revealing what's hidden from sight.<br/>
+            "Look closely now," he encourages with a smile so bright,<br/>
+            "At the intricate patterns that make life take flight."<br/>
+            <br/>
+            Through changing seasons, he stands by their side,<br/>
+            A steady, guiding force, their constant, trusted guide.<br/>
+            In spring, they explore the blooming flowers' sway,<br/>
+            In summer, the buzzing of insects at play.<br/>
+            <br/>
+            When autumn arrives with its leaves falling down,<br/>
+            He teaches the cycle of life that abounds.<br/>
+            And in cold winter, when the world seems so still,<br/>
+            He shows them life's resilience, iron-strong will.<br/>
+            <br/>
+            Beyond classroom walls, where nature's beauty shines,<br/>
+            With nets and notebooks, they study its designs.<br/>
+            He speaks of ecosystems, both delicate and grand,<br/>
+            Of food chains and webs, so intricately planned.<br/>
+            <br/>
+            In the school's small garden, he kneels by their side,<br/>
+            Demonstrating how to plant seeds with love and pride.<br/>
+            "Nurture them gently," he says with a patient smile,<br/>
+            "Watch them grow strong—it's worth every while."<br/>
+            <br/>
+            He tells tales of scientists, their struggles and triumphs too,<br/>
+            Of Darwin's long voyage on the Beagle so blue.<br/>
+            Of Fleming's discovery that changed our world's fate,<br/>
+            These stories of science he shares with great weight.<br/>
+            <br/>
+            When students struggle, feeling lost or alone,<br/>
+            Richard is there with a heart fully shown.<br/>
+            He listens, understands, offers his hand to hold,<br/>
+            Guiding them through life's mysteries to unfold.<br/>
+            <br/>
+            His classroom walls display projects fine and neat,<br/>
+            Each one a testament to young minds replete.<br/>
+            From cell models to life's tree so wide,<br/>
+            Each one crafted with care, love, and pride.<br/>
+            <br/>
+            When the final bell rings and students depart,<br/>
+            He stays in his classroom, content in his heart.<br/>
+            For Richard, the humble, the wise, and the true,<br/>
+            Finds joy in life's wonders, both old and new.<br/>
+            <br/>
+            He marks their work carefully, offering praise where it's due,<br/>
+            His comments thoughtful, encouraging them to pursue.<br/>
+            Always challenging them to see things anew,<br/>
+            To question, explore, and follow truths through.<br/>
+            <br/>
+            In the staff room, he's known for his quiet, kind way,<br/>
+            Always ready to listen, to brighten someone's day.<br/>
+            Colleagues respect him, value his insight,<br/>
+            His wisdom and humor make burdens feel light.<br/>
+            <br/>
+            At home in his study, his passion still burns,<br/>
+            Surrounded by books where much knowledge he learns.<br/>
+            He reads and researches, always seeking more,<br/>
+            To inspire his students as never before.<br/>
+            <br/>
+            Through years, his lessons will forever remain,<br/>
+            In his students' hearts like a soft, gentle rain.<br/>
+            For Richard, the humble biology teacher so dear,<br/>
+            Has shown them life's beauty, year after year.<br/>
+            <br/>
+            For every mind shaped, for every heart inspired,<br/>
+            For every path paved, every dream acquired,<br/>
+            He remains ever humble, ever grateful, ever true,<br/>
+            To the calling that guides him in all that he'll do.<br/>
+            <br/>
+            As years pass and his hair turns to gray,<br/>
+            His passion for teaching never fades away.<br/>
+            For in every student, he sees potential bright,<br/>
+            A spark of curiosity, a thirst for insight.<br/>
+            <br/>
+            So here's to Richard, the humble biology teacher,<br/>
+            Whose lessons extend far beyond any feature.<br/>
+            In his students' hearts, his memory will stay,<br/>
+            A guiding light, come what may.<br/>
+            <br/>
+            In the quiet classroom, where soft light gently gleams,<br/>
+            Stands Richard, humble, weaving life's serene dreams.<br/>
+            A biology teacher, with spirit so kind and pure,<br/>
+            He opens young minds, making knowledge secure.<br/>
+            <br/>
+
+            <h2>Jan's saga</h2>
+            <br/>
+            In the flickerin' glow of classroom lights so dim,<br/>
+            Where dusty old textbooks gathered grim,<br/>
+            Stood Mr. Nirmal, ruler in hand,<br/>
+            A proper stern bloke, commandin' the land.<br/>
+            His glasses perched on his nose just right,<br/>
+            His tweed jacket buttoned up tight.<br/>
+            The blackboard behind him was covered in sums,<br/>
+            While the classroom sat quiet as drums.<br/>
+            <br/>
+            But there in the back, with a face so divine,<br/>
+            Sat Jan Lukasiak, handsome and fine.<br/>
+            His chiseled cheekbones caught the light,<br/>
+            His piercing brown like beer eyes shone so bright.<br/>
+            His dark wavy hair fell just so,<br/>
+            A lock dangling down on his brow.<br/>
+            His strong jawline clenched as he chewed,<br/>
+            On his pen's plastic cap, looking bored and subdued.<br/>
+            <br/>
+            His maths book lay open, a canvas so bare,<br/>
+            Awaitin' his touch, his artistic flair.<br/>
+            The pages were crisp, the problems aligned,<br/>
+            But Jan had much different plans in mind.<br/>
+            With a flick of his pen and a stroke so bold,<br/>
+            He transformed the pages, a story untold.<br/>
+            His fingers moved quick with an artist's grace,<br/>
+            A smirk played on his handsome face.<br/>
+            <br/>
+            The Pythagorean theorem, once proper and neat,<br/>
+            Now sported a tache, lookin' dead cheeky and sweet.<br/>
+            Old Pythagoras himself had a top hat in place,<br/>
+            And a monocle drawn with such delicate trace.<br/>
+            But oh, what a sight, with his face so fair,<br/>
+            The girls in the class could only stare.<br/>
+            Their eyes followed Jan, watching him work,<br/>
+            As his pen danced and twirled with a mischievous quirk.<br/>
+            <br/>
+            Nirmal droned on, none the wiser, bless 'im,<br/>
+            "Now class, pay attention, this next bit's quite grim."<br/>
+            As Jan's pen danced, takin' the absolute mick,<br/>
+            Turning old Euler into a right proper dick.<br/>
+            The quadratic equations, once tidy and right,<br/>
+            Now twisted and tangled, a proper sight.<br/>
+            The parabolas sprouted little legs and feet,<br/>
+            Dancing a jig to a sly rhythmic beat.<br/>
+            <br/>
+            His handsome face lit with a mischievous grin,<br/>
+            As he doodled and drew, causin' a din.<br/>
+            The sine and cosine, once waves so pure,<br/>
+            Now danced with the devil, havin' a right laugh, for sure.<br/>
+            The sine wave had arms and was wavin' hello,<br/>
+            While cosine wore sunglasses, looking dead cool, yo.<br/>
+            The graphs all came alive under Jan's clever hand,<br/>
+            Living out adventures in this mathematical land.<br/>
+            <br/>
+            The classroom clock ticked, a slow, steady beat,<br/>
+            Its hands moving round, never missing a beat.<br/>
+            As Jan's masterpiece neared its deceit,<br/>
+            His artwork so clever, so wicked, so neat.<br/>
+            His face, so angelic, hid his cunning mind,<br/>
+            A wolf in sheep's clothin', one of a kind.<br/>
+            No one would suspect that this handsome young bloke,<br/>
+            Had turned all their maths into one big joke.<br/>
+            <br/>
+            Nirmal turned, his gaze sweepin' the room,<br/>
+            "Now then, who's ready to meet their doom?"<br/>
+            But Jan's book lay shut, hidin' its bloom,<br/>
+            His mischief concealed in that textbook tomb.<br/>
+            With a face so innocent, a gleam in his eye,<br/>
+            He looked like a saint, but oh what a lie.<br/>
+            His long lashes fluttered, his lips pressed tight,<br/>
+            Hiding all traces of his artistic delight.<br/>
+            <br/>
+            The bell finally rang, what a beautiful sound,<br/>
+            As the students all filed out, homeward bound.<br/>
+            They handed their books in, stacked with care,<br/>
+            His handiwork hidden, a secret affair.<br/>
+            But Nirmal would find, with a gasp and a stare,<br/>
+            The chaos and genius that Jan left there.<br/>
+            The teacher would clutch at his poor aching chest,<br/>
+            At the sight of those equations, put to the test.<br/>
+            <br/>
+            The next day at school there was quite a scene,<br/>
+            As students gathered to see what he'd mean.<br/>
+            The book was displayed for the whole class to see,<br/>
+            This mathematical madness, this anarchy.<br/>
+            The girls all sighed at the work of his hand,<br/>
+            This handsome young vandal, this mathematical man.<br/>
+            While the lads all laughed at the drawings so bold,<br/>
+            At the way that he twisted those theorems of old.<br/>
+            <br/>
+            So here's to Jan, with his face so fair,<br/>
+            A maths book vandal, drivin' 'im spare.<br/>
+            His legend now lives in the school's hallowed halls,<br/>
+            The boy who turned maths into art on its walls.<br/>
+            In the classroom of numbers, his legend will grow,<br/>
+            A tale to be told of that cheeky young crow.<br/>
+            A handsome genius, with a touch so bold and sly,<br/>
+            A rebel, an artist, oh my, oh my.<br/>
+            Innit just brilliant? What a guy, oh blimey!<br/>
+            A proper laugh, mate, what a legend, what an eyeful!<br/>
+            That Jan Lukasiak, he's one right proper lad,<br/>
+            The best looking troublemaker that school ever had.<br/>
 
         </div >
 
