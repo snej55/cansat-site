@@ -16,6 +16,7 @@ reset = digitalio.DigitalInOut(board.GP13)
 rfm = adafruit_rfm69.RFM69(spi, cs, reset, 434.0, baudrate=2000000)
 encryption_key = "VB6CYeaOtduNZcgu"
 #rfm.encryption_key = encryption_key
+tx
 
 print("CanSat Ground Station Init")
 
@@ -23,7 +24,7 @@ while True:
     
     #time.sleep(1)
     #print("Waiting for packets...")
-    rfm.send(bytes("qwertyuioplkjhgfdsazxcv" * 2,"utf-8"))
+    #rfm.send(bytes("qwertyuioplkjhgfdsazxcv" * 2,"utf-8"))
     packet = rfm.receive()
     # Optionally change the receive timeout from its default of 0.5 seconds:
     # packet = rfm9x.receive(timeout=5.0)
