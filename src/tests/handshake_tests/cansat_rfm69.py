@@ -27,4 +27,4 @@ rfm.tx_power = 13
 while True:
     rfm.send(bytes("sssssssssssssssssssssssssssssssssssssssssssssssssss", "utf-8"))
     time.sleep(0.5)
-    print("sssssssssssssssssssssssssssssssssssssssssssssssssss")
+    print("hi")
