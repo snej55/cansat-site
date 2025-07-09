@@ -5,6 +5,28 @@ import adafruit_rfm69
 import time
 import json
 
+class Station:
+    def __init__(self):
+        self.rfm = self.create_rfm69(board.GP6, board.GP7, board.GP4, board.GP5, board.GP13)
+    
+    @staticmethod
+    def create_rfm69(SCK, MOSI, MISO, CS, RESET) -> adafruit_rfm69.RFM69:
+        # create the spi bus
+        spi = busio.SPI(SCK, MOSI, MISO)
+        # chip select and reset pins
+        cs = digitalio.DigitalInOut(CS)
+        reset = digitalio.DigitalInOut(RESET)
+        # Initialize the radio
+        rfm = adafruit_rfm69.RFM69(spi, cs, reset, 434.0, baudrate=2000000)
+        encryption_key = "VB6CYeaOtduNZcgu"
+        rfm.encryption_key = encryption_key
+        rfm.tx_power = 13
+        return rfm
+    
+    def request_data(self, data_type):
+        pass
+
+
 # Create the SPI bus
 spi = busio.SPI(board.GP6, board.GP7, board.GP4)  # SCK, MOSI, MISO
 
@@ -12,11 +34,7 @@ spi = busio.SPI(board.GP6, board.GP7, board.GP4)  # SCK, MOSI, MISO
 cs = digitalio.DigitalInOut(board.GP5)
 reset = digitalio.DigitalInOut(board.GP13)
 
-# Initialize the radio
-rfm = adafruit_rfm69.RFM69(spi, cs, reset, 434.0, baudrate=2000000)
-encryption_key = "VB6CYeaOtduNZcgu"
-rfm.encryption_key = encryption_key
-rfm.tx_power = 13
+
 
 print("CanSat Ground Station Init")
 
