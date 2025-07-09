@@ -34,9 +34,21 @@ class Station:
             print(f"ERROR decoding (ASCII) data! HEX: {[hex(x) for x in raw_packet]}")
             return "STATUS_ERROR"
     
-    def process_packet(packet_text) -> str:
-        pass
-    
+    @staticmethod
+    def process_packet(packet_text, status, data_type) -> str:
+        # discard if text is invalid
+        if packet_text == "STATUS_ERROR":
+            return status
+        
+        if packet_text == "REQUEST_DATA":
+            return data_type
+        
+        if packet_text == data_type:
+            return "SEND_DATA"
+        
+        return status
+        
+    # data type is type of sensor data (e.g. pressure, altitude, etc)
     def request_data(self, data_type):
         status = "REQUEST_DATA"
         running = True
@@ -49,6 +61,8 @@ class Station:
                 packet_text = self.process_data(packet)
                 rssi = self.rfm.last_rssi
                 print(f"Recieved signal strength: {rssi} dB")
+                
+                status = self.process_packet(packet_text, status, data_type)
 
 
 station = Station()
