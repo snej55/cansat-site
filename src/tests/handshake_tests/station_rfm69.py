@@ -23,7 +23,7 @@ print("Station Init")
 #while True:
 message = "STATION_RADIO_ALIVE"
 station_message = "CANSAT_RADIO_ALIVE"
-rfm.send(bytes(message, "utf-8"))
+
 
 def waitUntil(statement, requirement):
     while statement != requirement:
@@ -37,6 +37,7 @@ def process_handshake(packet):
         print(f"Handshake suceeded! Signal Strength: {rssi} dB")
 
 def wait_handshake():
+    
     packet = rfm.receive()
     if packet is None:
         print("Received nothing! Listening again...")
@@ -48,4 +49,6 @@ def wait_handshake():
 while True: #Busy wait for station to respond
     packet = wait_handshake()
     if packet != False:
+        rfm.send(bytes(message, "utf-8"))
         process_handshake(packet)
+        break
