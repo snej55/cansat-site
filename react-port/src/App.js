@@ -79,7 +79,7 @@ function App() {
                 <button onClick={() => {toogleDarkMode(1); document.cookie = "background: 1"}} style={{backgroundColor: "#000", border: darkMode ? "2px solid #ddda" : "none"}}></button>
             </div>
             <i id="PressOptions" onClick={() => {toogleMenu(0); setPage("credits")}}>
-                <a className="menu-item" id="credits">Credits</a>
+                <a className="menu-item" id="credits" href>Credits</a>
             </i>
         </div>
       </div>
@@ -88,9 +88,9 @@ function App() {
       </div>
       <footer style={{backgroundColor: accentColor}}>
         <div>
-          <p>
-            This Project is Open Sourced Under GNU GENERAL PUBLIC LICENSE <br></br>
-            Email:&nbsp; cansat@ILoveBeans.uk.org
+          <p style={{textAlign: 'center'}}>
+            This Project is Open Sourced Under GNU GENERAL PUBLIC LICENSE <br />
+            Email: &nbsp; cansat@ILoveBeans.uk.org
           </p>
           <div id="icons">
             <a id="github" href="https://github.com/snej55/cansat-site" target="_blank" rel="noreferrer"><i class="demo-icon icon-github-circled-alt2 git"></i></a>
