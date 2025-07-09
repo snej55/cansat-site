@@ -79,7 +79,7 @@ function App() {
                 <button onClick={() => {toogleDarkMode(1); document.cookie = "background: 1"}} style={{backgroundColor: "#000", border: darkMode ? "2px solid #ddda" : "none"}}></button>
             </div>
             <i id="PressOptions" onClick={() => {toogleMenu(0); setPage("credits")}}>
-                <a className="menu-item" id="credits">Credits</a>
+                <a className="menu-item" id="credits" href>Credits</a>
             </i>
         </div>
       </div>

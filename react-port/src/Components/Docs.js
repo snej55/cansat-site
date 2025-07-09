@@ -28,6 +28,8 @@ export function Docs() {
                         </li>
                         <li>
                             <h4>Work on the 434MHz radio (rfm69)</h4>
+                            parachute is crazy
+                            
                         </li>
                     </ul>
                 </div>
