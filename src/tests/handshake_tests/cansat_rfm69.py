@@ -18,21 +18,34 @@ encryption_key = "VB6CYeaOtduNZcgu"
 rfm.encryption_key = encryption_key
 rfm.tx_power = 13
 
-print("Ground Station Init")
+print("CanSat Init")
 
-while True:
+#while True:
+message = "CANSAT_RADIO_ALIVE"
+station_message = "STATION_RADIO_ALIVE"
+rfm.send(bytes(message, "utf-8"))
+
+def waitUntil(statement, requirement):
+    while statement != requirement:
+        pass
+
+
+def process_handshake(packet):
+    packet_text = str(packet, "ascii")
+    if packet_text == station_message:
+        rssi = rfm.last_rssi
+        print(f"Handshake suceeded! Signal Strength: {rssi} dB")
+
+def wait_handshake():
+    packet = rfm.receive()
     if packet is None:
         print("Received nothing! Listening again...")
-
-packet_text = str(packet, "ascii")
-
-if packet_text == "STATION_RADIO_ALIVE":
-    print("Handshake suceeded !")
-    message = "CANSAT_RADIO_ALIVE"
-    rfm.send(bytes(message, "utf-8"))
-    packet = rfm.receive()
-
-
-        rssi = rfm.last_rssi
-        print(f"Received signal strength: {rssi} dB")
-
+        return False
+        
+    else:
+        return packet
+    
+while True: #Busy wait for station to respond
+    packet = wait_handshake()
+    if packet != False:
+        process_handshake(packet)
