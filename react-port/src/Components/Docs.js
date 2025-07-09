@@ -19,10 +19,12 @@ export function Docs() {
                         <li>
                             <h4>outer case prototype</h4>
                         </li>
+                        <br />
                         <li>
                             <h4>Schematic</h4>
                             We have started to work on the schematic
                         </li>
+                        <br />
                         <li>
                             <h4>parachute</h4>
                             The parachute is a very important part of the can. Without it, the can would crash to the ground 
@@ -38,6 +40,7 @@ export function Docs() {
                             it would catch the wind and blow away, risking making it unrecoverable. This would void our 
                             mission, and we do not want to be disqualified for an oversized parachute.
                         </li>
+                        <br />
                         <li>
                             <h4>Work on the 434MHz radio (rfm69)</h4>
                         </li>
