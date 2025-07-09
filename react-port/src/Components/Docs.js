@@ -18,15 +18,19 @@ export function Docs() {
                     <ul className="docs-bullets">
                         <li>
                             <h4>outer case prototype</h4>
+                            <br />
+                            Some outer case prototype yap.
                         </li>
-                        <br />
+                        <br /><br />
                         <li>
                             <h4>Schematic</h4>
+                            <br />
                             We have started to work on the schematic
                         </li>
-                        <br />
+                        <br /><br />
                         <li>
                             <h4>parachute</h4>
+                            <br />
                             The parachute is a very important part of the can. Without it, the can would crash to the ground 
                             and possibly leave a crater and shattered plastic. And a broken Pi Pico. That would not be good. 
                             So we have to create a parachute. The ideal descent speed is between 10 and 15 ms^-1. This is 
@@ -40,9 +44,11 @@ export function Docs() {
                             it would catch the wind and blow away, risking making it unrecoverable. This would void our 
                             mission, and we do not want to be disqualified for an oversized parachute.
                         </li>
-                        <br />
+                        <br /><br />
                         <li>
                             <h4>Work on the 434MHz radio (rfm69)</h4>
+                            <br />
+                            Some radio yap.
                         </li>
                     </ul>
                 </div>
