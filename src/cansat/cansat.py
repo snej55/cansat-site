@@ -8,36 +8,74 @@ from rfm69 import create_rfm69
 rfm = create_rfm69()
 #lis3dh = create_lis3dh(board.GP3, board.GP2)
 
-def gen_data(bmp280, lis3dh) -> str:
+def gen_pressure_data():
     data = {
         "bmp": {
-            "temp": bmp280.temperature,
-            "pres": bmp280.pressure,
-            "alt": bmp280.altitude
+            "temp": 27.6,
+            "pres": 1080,
+            "alt": 820
         },
-        "lis": {
-            "acc": reading_lis3dh(lis3dh)
-        }
     }
-    return json.dumps(data)
+    return str(json.dumps(data))
 
-#rfm.reset()
-while True:
-    packet = rfm.receive()
-    if packet is None:
-        print("Recieved nothing! Listening again...")
-    else:
-        print(f"Recieved raw bytes: {packet}")
+def process_data(raw_packet):
+    try:
+        packet_text = str(raw_packet, "ascii")
+        print(f"Recieved (ASCII): {packet_text}")
+    
+        return packet_text
+    except UnicodeError:
+        print(f"ERROR decoding (ASCII) data! HEX: {[hex(x) for x in raw_packet]}")
+        return "STATUS_ERROR"
+    
+def process_packet(packet_text, status, data_type) -> str:
+        # discard if text is invalid
+        if packet_text == "STATUS_ERROR":
+            return status
         
-        print(f"Received (raw bytes): {packet}")
-        try:
-            packet_text = str(packet, "ascii")
-            print(time.time())
-            print(f"Received (ASCII): {packet_text}")
-        except UnicodeError:
-            print("Hex data: ", [hex(x) for x in packet])
+        if packet_text == "receive_data":
+            return "receive_data"
         
-        rssi = rfm.last_rssi
-        print(f"Received signal strength: {rssi} dB")
+        if packet_text == data_type:
+            
+            return data_type
         
-        rfm.send(bytes("hey there handsome", "utf-8"))
+        if packet_text == "REQUEST_DATA":
+            return gen_data()
+        # if it isn't any of the other stuff
+        if packet_text == "STATUS":
+            return "SUCCESS"
+        if packet_text == "REQUEST_PRESSURE_DATA":
+            return send_data("pressure")
+            
+        return status, data_type
+
+
+# data type is type of sensor data (e.g. pressure, altitude, etc)
+
+def send_data(datatype):
+    if datatype == "pressure":
+        data = gen_pressure_data()
+        return data
+        
+    
+def receive_data():
+    status = "NONE"
+    data_type = "NONE"
+    running = True
+    while running:
+        rfm.send(bytes(status, "utf-8"))
+        packet = rfm.receive()
+        if packet is None:
+            pass
+            #print("Recieved nothing! Listening again...")
+        else:
+            packet_text = process_data(packet)
+            rssi = rfm.last_rssi
+            print(f"Recieved signal strength: {rssi} dB")
+            
+            status = process_packet(packet_text, status, data_type)
+
+
+
+receive_data("pressure")
