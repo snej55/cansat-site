@@ -23,10 +23,34 @@ class Station:
         rfm.tx_power = 13
         return rfm
     
+    @staticmethod
+    def process_data(raw_packet):
+        try:
+            packet_text = str(raw_packet, "ascii")
+            print(f"Recieved (ASCII): {packet_text}")
+        
+            return packet_text
+        except UnicodeError:
+            print(f"ERROR decoding (ASCII) data! HEX: {[hex(x) for x in raw_packet]}")
+            return "STATUS_ERROR"
+    
     def request_data(self, data_type):
-        pass
+        status = "REQUEST_DATA"
+        running = True
+        while running:
+            self.rfm.send(bytes(status, "utf-8"))
+            packet = self.rfm.receive()
+            if packet is None:
+                print("Recieved nothing! Listening again...")
+            else:
+                packet_text = self.process_data(packet)
+                rssi = self.rfm.last_rssi
+                print(f"Recieved signal strength: {rssi} dB")
 
 
+station = Station()
+station.request_data("pressure")
+"""
 # Create the SPI bus
 spi = busio.SPI(board.GP6, board.GP7, board.GP4)  # SCK, MOSI, MISO
 
@@ -75,3 +99,4 @@ while True:
         # print it.
         rssi = rfm.last_rssi
         print(f"Received signal strength: {rssi} dB")
+"""
