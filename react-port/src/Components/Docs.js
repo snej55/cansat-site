@@ -22,13 +22,32 @@ export function Docs() {
                         <li>
                             <h4>Schematic</h4>
                             We have started to work on the schematic
+                            <table>
+                            <tr>
+                                <th>parchute calculations</th>
+                            </tr>
+                            <tr>
+                                <td>Terminal Velocity</td>
+                                <td>12m/s^2</td>
+                            </tr>
+                            <tr>
+                                <td>Total Mass</td>
+                                <td>0.35kg</td>
+                            </tr>
+                            <tr>
+                                <td>Area</td>
+                                <td>0.38m^2</td>
+                            </tr>
+                            </table>
                         </li>
                         <li>
                             <h4>parachute</h4>
                             parachute is crazy
                         </li>
                         <li>
-                            <h4>Work on the 434MHz radio (rfm69)</h4>
+                            <h4>434MHz radio (rfm69)</h4>
+                            <h5>Nathan Yin & Jens Kromdjik</h5>
+                            The radio includes Aes Encryption to ensure secure transfer
                         </li>
                     </ul>
                 </div>

@@ -1,5 +1,5 @@
 * {
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   /* fixes overflow issues */
   margin: 0;
   padding: 0;
@@ -25,6 +25,22 @@ img {
   -webkit-user-select: none;
   -o-user-select: none;
   user-select: none;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
 }
 
 div#header {
@@ -117,6 +133,7 @@ div#header>div#options {
   border-radius: 20px;
   border: none;
   margin-right: 5px;
+  cursor: pointer;
 }
 
 .pageButton {
@@ -127,6 +144,7 @@ div#header>div#options {
   height: max-content;
   cursor: pointer;
   border-bottom: 1px #fff0 solid;
+  border-top: 1px;
   text-decoration: none;
   transition: 0.2s ease-in-out;
 }
