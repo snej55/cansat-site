@@ -46,11 +46,18 @@ class Station:
         if packet_text == data_type:
             return "SEND_DATA"
         
-        return status
+        
+        
+        if packet_text == "SUCCESS":
+            return "EXIT_SUCCESS"
+        
+        # assume it's legit data
+        return "STATUS"
         
     # data type is type of sensor data (e.g. pressure, altitude, etc)
     def request_data(self, data_type):
         status = "REQUEST_DATA"
+        data = ""
         running = True
         while running:
             self.rfm.send(bytes(status, "utf-8"))
@@ -63,10 +70,17 @@ class Station:
                 print(f"Recieved signal strength: {rssi} dB")
                 
                 status = self.process_packet(packet_text, status, data_type)
+                if status == "STATUS":
+                    data = packet_text
+                    print(f"RECIEVED SENSOR DATA: {data}")
+                if status == "EXIT_SUCCESS":
+                    return data
 
 
 station = Station()
-station.request_data("pressure")
+while True:
+    data = station.request_data("pressure")
+    print(f"Parsing data: {data}")
 """
 # Create the SPI bus
 spi = busio.SPI(board.GP6, board.GP7, board.GP4)  # SCK, MOSI, MISO
