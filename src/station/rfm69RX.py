@@ -34,6 +34,9 @@ class Station:
             print(f"ERROR decoding (ASCII) data! HEX: {[hex(x) for x in raw_packet]}")
             return "STATUS_ERROR"
     
+    def process_packet(packet_text) -> str:
+        pass
+    
     def request_data(self, data_type):
         status = "REQUEST_DATA"
         running = True
