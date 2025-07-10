@@ -41,12 +41,13 @@ class Station:
             return status
         
         if packet_text == "REQUEST_DATA":
+            return "DATA_TYPE"
+        
+        if packet_text == "RECIEVE_DATA_TYPE":
             return data_type
         
-        if packet_text == data_type:
+        if packet_text == "SET_DATA_TYPE":
             return "SEND_DATA"
-        
-        
         
         if packet_text == "SUCCESS":
             return "EXIT_SUCCESS"
