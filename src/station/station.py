@@ -8,6 +8,7 @@ import json
 class Station:
     def __init__(self):
         self.rfm = self.create_rfm69(board.GP6, board.GP7, board.GP4, board.GP5, board.GP13)
+        self.last_rssi = 0
     
     @staticmethod
     def create_rfm69(SCK, MOSI, MISO, CS, RESET) -> adafruit_rfm69.RFM69:
@@ -27,7 +28,7 @@ class Station:
     def process_data(raw_packet):
         try:
             packet_text = str(raw_packet, "ascii")
-            print(f"Recieved (ASCII): {packet_text}")
+            #print(f"Recieved (ASCII): {packet_text}")
         
             return packet_text
         except UnicodeError:
@@ -68,17 +69,29 @@ class Station:
             else:
                 packet_text = self.process_data(packet)
                 rssi = self.rfm.last_rssi
-                print(f"Recieved signal strength: {rssi} dB")
+                self.last_rssi = rssi
                 
                 status = self.process_packet(packet_text, status, data_type)
                 if status == "STATUS":
                     data = packet_text
-                    print(f"RECIEVED SENSOR DATA: {data}")
+                    #print(f"RECIEVED SENSOR DATA: {data}")
                 if status == "EXIT_SUCCESS":
                     return data
+    
+    @staticmethod
+    def parse_data(json_data) -> dict | str:
+        try:
+            data = json.loads(json_data)
+            return data
+        except ValueError:
+            print(f"ERROR: Failed to load json from `{json_data}`! Please check if the data is json.")
+            return "smoking hot garbage"
 
 
 station = Station()
 while True:
-    data = station.request_data("bmp")
-    print(f"Parsing data: {data}")
+    data = station.parse_data(station.request_data("bmp"))
+    try:
+        print(data["bmp"]["temp"])
+    except TypeError:
+        print(f"ERROR: Failed to read from `{data}`")
