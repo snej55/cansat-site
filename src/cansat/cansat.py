@@ -1,4 +1,4 @@
-import time, board, json
+import time, board, json, busio, digitalio, adafruit_rfm69
 
 #from bmp280 import create_bmp280
 from rfm69 import create_rfm69
@@ -77,7 +77,7 @@ class Cansat:
     def broadcast(self):
         while True:
             self.rfm.send(bytes(self.status, "utf-8"))
-            packet = self.rfm.recieve()
+            packet = self.rfm.receive()
             if packet is None:
                 print("Recieved nothing! Listening again...")
             else:
