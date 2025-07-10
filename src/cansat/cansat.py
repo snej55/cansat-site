@@ -3,7 +3,9 @@ import time, board, json, busio, digitalio, adafruit_rfm69
 #from bmp280 import create_bmp280
 from rfm69 import create_rfm69
 #from lis3dh import *
+led = digitalio.DigitalInOut(board.LED)
 
+led.direction = digitalio.Direction.OUTPUT
 class Cansat:
     def __init__(self):
         self.rfm = self.create_rfm69(board.GP6, board.GP7, board.GP4, board.GP5, board.GP13)
@@ -23,7 +25,17 @@ class Cansat:
         rfm.encryption_key = encryption_key
         rfm.tx_power = 13
         return rfm
-    
+    @staticmethod
+    def gen_bmp_data() -> str:
+        data = {
+            "bmp": {
+                "temp": 28.32,
+                "pres": 1023,
+                "alt": 230
+            }
+        }
+        return str(json.dumps(data, separators=(',',':')))
+
     @staticmethod
     def process_data(raw_packet):
         try:
@@ -39,7 +51,7 @@ class Cansat:
         if self.data_type == "NONE":
             return "garbage"
         elif self.data_type.lower() == "bmp":
-            return "some pressure data"
+            return self.gen_bmp_data()
         else:
             return "hot garbage"
     
@@ -79,15 +91,18 @@ class Cansat:
             self.rfm.send(bytes(self.status, "utf-8"))
             packet = self.rfm.receive()
             if packet is None:
-                print("Recieved nothing! Listening again...")
+                led.value = int(time.time()) % 2 == 0
+                self.status = "LISTENING"
+                
             else:
                 packet_text = self.process_data(packet)
                 rssi = self.rfm.last_rssi
                 print(f"Recieved signal strength: {rssi} dB")
-
+                led.value = False
                 self.process_packet(packet_text)
                 print(f"Recieved packet: {packet_text}")
                 print(f"STATUS: {self.status}")
+                led.value = True
 
 
 cansat = Cansat()
