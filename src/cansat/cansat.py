@@ -38,7 +38,7 @@ class Cansat:
     def gen_data(self) -> str:
         if self.data_type == "NONE":
             return "garbage"
-        elif self.data_type == "BMP":
+        elif self.data_type.lower() == "bmp":
             return "some pressure data"
         else:
             return "hot garbage"

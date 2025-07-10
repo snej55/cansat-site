@@ -80,5 +80,5 @@ class Station:
 
 station = Station()
 while True:
-    data = station.request_data("pressure")
+    data = station.request_data("bmp")
     print(f"Parsing data: {data}")
