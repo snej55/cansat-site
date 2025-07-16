@@ -37,6 +37,9 @@ class Station:
     
     @staticmethod
     def process_packet(packet_text, status, data_type) -> str:
+        """
+        Radio Handshake: ...
+        """
         # discard if text is invalid
         if packet_text == "STATUS_ERROR":
             return status

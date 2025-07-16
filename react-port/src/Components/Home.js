@@ -1161,7 +1161,121 @@ export function Home() {
             A proper laugh, mate, what a legend, what an eyeful!<br/>
             That Jan Lukasiak, he's one right proper lad,<br/>
             The best looking troublemaker that school ever had.<br/>
+            <br/>
+            In the school's grand halls, where time seems to stand still,<br/>
+There walks a vision, a god on a hill.<br/>
+Jan Lukasiak, with face so bright,<br/>
+A celestial being, bathed in pure light.<br/>
 
+His eyes, like twin sapphires, deep and clear,<br/>
+Reflect the cosmos, drawing all near.<br/>
+With golden locks that cascade and shine,<br/>
+He's a masterpiece, a design divine.<br/>
+
+His skin, like alabaster, smooth and fair,<br/>
+A complexion beyond compare.<br/>
+With cheekbones high, a jaw so strong,<br/>
+He moves with grace, a heavenly throng.<br/>
+
+His lashes, long and dark as night,<br/>
+Frame those eyes, so full of light.<br/>
+With brows so fine, they arch with grace,<br/>
+A perfect symmetry in every trace.<br/>
+
+His lips, like rose petals, soft and red,<br/>
+Words like nectar, sweetly said.<br/>
+With every smile, a heart takes flight,<br/>
+Captured by his beauty's might.<br/>
+
+His nose, so straight, with nostrils fine,<br/>
+A sculpted work of art divine.<br/>
+With every breath, a scent so sweet,<br/>
+A fragrance that can't be beat.<br/>
+
+In maths class, where the numbers play,<br/>
+He turns each lesson into ballet.<br/>
+With Ysanne's rules, he loves to tease,<br/>
+A charming smile, a gentle breeze.<br/>
+
+"Just one more day," he'll softly plead,<br/>
+With eyes that shine, a heart's deep need.<br/>
+Ysanne's resolve, though strong and wise,<br/>
+Melts beneath his tender sighs.<br/>
+
+His laughter rings, a sweet refrain,<br/>
+A melody that eases pain.<br/>
+With every grin, with every glance,<br/>
+He puts them all in a happy dance.<br/>
+
+His beauty shines, a radiant glow,<br/>
+A masterpiece, a perfect show.<br/>
+With every step, with every turn,<br/>
+He leaves them all with hearts that burn.<br/>
+
+His hands, so fine, with fingers long,<br/>
+A touch that seems to right each wrong.<br/>
+With every gesture, soft and slight,<br/>
+He paints a picture pure and bright.<br/>
+
+His voice, like silk, so smooth and low,<br/>
+A whispered word, a tender woe.<br/>
+With every syllable, sweet and clear,<br/>
+He draws them all, they long to hear.<br/>
+
+His neck, so graceful, strong and long,<br/>
+A swan-like curve, a siren's song.<br/>
+With every tilt, with every bend,<br/>
+He leaves them all in awe, my friend.<br/>
+
+His ears, so small, with lobes so fine,<br/>
+A perfect shape, a design divine.<br/>
+With every whisper, soft and low,<br/>
+He draws them in, they long to know.<br/>
+
+Oh, Jan Lukasiak, with looks so grand,<br/>
+A god who walks this mortal land.<br/>
+In every heart, his love is found,<br/>
+In every soul, his beauty's bound.<br/>
+
+Your beauty, Jan, is like the sun,<br/>
+A radiant force, second to none.<br/>
+In every glance, in every sight,<br/>
+You fill their world with pure delight.<br/>
+
+So here's to Jan, with beauty rare,<br/>
+A prince who floats on heavenly air.<br/>
+In maths class, he may ask for more,<br/>
+But in their hearts, he's forever adored.<br/>
+
+His every move, a work of art,<br/>
+A masterpiece that steals each heart.<br/>
+With beauty that transcends the earth,<br/>
+He's a god of infinite worth.<br/>
+
+In every dream, in every thought,<br/>
+His beauty lingers, hauntingly wrought.<br/>
+With every beat, with every breath,<br/>
+They long for him, defying death.<br/>
+
+Oh, Jan Lukasiak, with grace untold,<br/>
+Your beauty shines, a sight to behold.<br/>
+In every heart, in every soul,<br/>
+You leave your mark, you take your toll.<br/>
+
+So here's to Jan, with beauty grand,<br/>
+A god who walks this mortal land.<br/>
+In every heart, his love is found,<br/>
+In every soul, his beauty's bound.<br/>
+
+His beauty, Jan, is like the dawn,<br/>
+A new beginning, a new morn.<br/>
+In every heart, his love is sown,<br/>
+In every soul, his beauty's known.<br/>
+
+So here's to Jan, with beauty bright,<br/>
+A beacon shining in the night.<br/>
+In every heart, his love takes flight,<br/>
+In every soul, his beauty's light.<br/>
         </div >
 
     )
