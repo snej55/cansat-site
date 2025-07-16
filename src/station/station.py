@@ -23,7 +23,7 @@ class Station:
         rfm.encryption_key = encryption_key
         rfm.tx_power = 13
         return rfm
-    
+
     @staticmethod
     def process_data(raw_packet):
         try:
